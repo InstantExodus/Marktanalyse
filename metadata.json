@@ -1,0 +1,5 @@
+{
+  "name": "Q3 Marktanalyse Final",
+  "description": "Ein analytisches Dashboard zur Darstellung von Marktdaten des öffentlichen Sektors in Deutschland. Es bietet Einblicke in Marktaktivität, KI-Ausschreibungen, Rahmenverträge, semantische Themen, wichtige Dimensionen und Zuschlagskriterien.",
+  "requestFramePermissions": []
+}

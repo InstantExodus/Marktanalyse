@@ -1,0 +1,162 @@
+{
+  "_SCHEMA_INSTRUCTIONS_": "Dies ist das Template, das du für den Reiter 'Allgemeine Insights' befüllen musst. Ersetze alle Platzhalter wie '[...]' mit den korrekten Werten. Folge den Anweisungen in den '_comment'-Feldern exakt.",
+  "schema_template": {
+    "YTD": {
+      "view": "YTD",
+      "_comment_view": "Statischer Identifikator für die Jahresvergleichs-Ansicht. Nicht ändern.",
+      "currentPeriodLabel": "[Aktueller YTD-Zeitraum, z.B. Q1-Q3 2025]",
+      "_comment_currentPeriodLabel": "Label für den aktuellen, kumulativen Zeitraum.",
+      "previousPeriodLabel": "[Vorjahres YTD-Zeitraum, z.B. Q1-Q3 2024]",
+      "_comment_previousPeriodLabel": "Label für den kumulativen Vergleichszeitraum im Vorjahr.",
+      "executiveSummaryPoints": [
+        {
+          "title": "Marktaktivität", "icon": "graph", "description": "[...]",
+          "_comment": "Synthetisiere hier die Kernaussage zur Entwicklung der **Gesamtzahl an Ausschreibungen**. Bsp: 'Im [currentPeriodLabel] wurden deutlich mehr Vergaben veröffentlicht als im [previousPeriodLabel] (+XX%).'"
+        },
+        {
+          "title": "KI-Fokus", "icon": "robot", "description": "[...]",
+          "_comment": "Synthetisiere hier die Kernaussage zur Entwicklung des **Anteils an Primär-KI-Projekten**. Bsp: 'Der Anteil an Primär-KI-Projekten ist um X,X pp gesunken; KI wird häufiger Teil größerer Vorhaben.'"
+        },
+        {
+          "title": "Strategische Beschaffung", "icon": "file", "description": "[...]",
+          "_comment": "Synthetisiere hier die Kernaussage zur Entwicklung des **Anteils an Rahmenverträgen**. Bsp: 'Der Anteil an Rahmenverträgen steigt im Vorjahresvergleich, was auf strategischere Beschaffungen hindeutet.'"
+        },
+        {
+          "title": "Leistungs-Mix", "icon": "settings", "description": "[...]",
+          "_comment": "Synthetisiere hier die Kernaussage zu den **meistgefragten Leistungen**. Identifiziere die Top-Leistung und die größten Gewinner/Verlierer. Bsp: 'Softwareentwicklung bleibt Leitdisziplin; Betrieb/Wartung gewinnt an Bedeutung.'"
+        },
+        {
+          "title": "Regionale Verteilung", "icon": "map", "description": "[...]",
+          "_comment": "Synthetisiere hier die Kernaussage zur **geografischen Verteilung**. Identifiziere die führende Region und die größten Auf- oder Absteiger. Bsp: 'Bund bleibt führend, verliert aber relativ; Bayern gewinnt an Gewicht.'"
+        },
+        {
+          "title": "Top-Branchen", "icon": "building", "description": "[...]",
+          "_comment": "Synthetisiere hier die Kernaussage zur **Branchenverteilung**. Identifiziere die führende Branche und die größten Wachstumstreiber. Bsp: 'Öffentliche Verwaltung bleibt größte Branche; Gesundheit treibt das Wachstum.'"
+        }
+      ],
+      "topInsights": [
+        {
+          "id": "gen_activity", "title": "Ausschreibungsaktivität", "subtitle": null,
+          "value": "[Zahlenwert]", "_comment_value": "Absolute Gesamtzahl der Ausschreibungen im aktuellen YTD-Zeitraum.",
+          "delta": "[Dezimalwert]", "_comment_delta": "Relative Veränderung zum Vorjahreszeitraum. Formel: (aktuell - vorher) / vorher. Bsp: 0.42 für +42%.",
+          "valueType": "count", "deltaType": "rel", "provenance": "faktisch",
+          "interpretation": "[String]", "_comment_interpretation": "1-2 Sätze Interpretation im sachlichen Stil, mit **Markdown**-Hervorhebung.",
+          "calculationNote": "[String]", "_comment_calculationNote": "1 Satz, der die Berechnung erklärt. Bsp: Gesamtzahl der Ausschreibungen in [currentPeriodLabel] verglichen mit [previousPeriodLabel].",
+          "detailData": [
+            { "window": "[Label Vorjahr]", "count_tenders": "[Zahlenwert]", "_comment": "Datenpunkt für den Vorjahreszeitraum." },
+            { "window": "[Label Aktuell]", "count_tenders": "[Zahlenwert]", "_comment": "Datenpunkt für den aktuellen Zeitraum." }
+          ]
+        },
+        {
+          "id": "gen_ai_primary", "title": "Primär-KI-Anteil", "subtitle": "Anteil in [currentPeriodLabel]",
+          "value": "[Dezimalwert]", "_comment_value": "Anteil der Primär-KI-Projekte im aktuellen YTD-Zeitraum. Formel: count_primär_ki / count_total. Bsp: 0.26 für 26%.",
+          "delta": "[Dezimalwert]", "_comment_delta": "Veränderung in Prozentpunkten (pp) zum Vorjahreszeitraum. Formel: anteil_aktuell - anteil_vorher. Bsp: -0.097 für -9.7 pp.",
+          "valueType": "share", "deltaType": "pp", "provenance": "klassifiziert",
+          "interpretation": "[String]", "calculationNote": "[String]",
+          "detailData": {
+            "barData": [
+              { "name": "[Label Vorjahr]", "value": "[Dezimalwert]", "n": "[Zahlenwert]", "_comment": "'value' = Anteil, 'n' = Gesamtzahl der Ausschreibungen der Periode." },
+              { "name": "[Label Aktuell]", "value": "[Dezimalwert]", "n": "[Zahlenwert]" }
+            ]
+          }
+        },
+        {
+          "id": "gen_framework", "title": "Rahmenverträge", "subtitle": "Anteil in [currentPeriodLabel]",
+          "value": "[Dezimalwert]", "_comment_value": "Anteil der Rahmenverträge im aktuellen YTD-Zeitraum.",
+          "delta": "[Dezimalwert]", "_comment_delta": "Veränderung in pp zum Vorjahreszeitraum.",
+          "valueType": "share", "deltaType": "pp", "provenance": "faktisch",
+          "interpretation": "[String]", "calculationNote": "[String]",
+          "detailData": {
+            "barData": [
+              { "name": "[Label Vorjahr]", "value": "[Dezimalwert]", "n": "[Zahlenwert]" },
+              { "name": "[Label Aktuell]", "value": "[Dezimalwert]", "n": "[Zahlenwert]" }
+            ]
+          }
+        },
+        {
+          "id": "gen_region", "title": "Regionen", "subtitle": "[Top-Region, z.B. 'Top: Bund, 23,5%']",
+          "value": "[Dezimalwert]", "_comment_value": "Anteil der führenden Region im aktuellen YTD-Zeitraum.",
+          "delta": "[Dezimalwert]", "_comment_delta": "Veränderung in pp für die führende Region.",
+          "valueType": "share", "deltaType": "pp", "provenance": "faktisch",
+          "interpretation": "[String]", "calculationNote": "[String]",
+          "detailData": {
+            "header": { "detail": "[Absolute Zahlen, z.B. '27/115 in Halbjahr 1 2025']" },
+            "bars": [
+              {
+                "label": "[Name der Region]",
+                "value_pct": "[Zahlenwert]", "_comment_value_pct": "Aktueller Anteil in Prozent (z.B. 23.5 für 23.5%).",
+                "delta_pp": "[Zahlenwert]", "_comment_delta_pp": "Veränderung in Prozentpunkten (z.B. -2.4 für -2.4 pp).",
+                "detail_current": "[String]", "_comment_detail_current": "Absolute Zahlen aktuell, z.B. '27/115 in Halbjahr 1 2025'.",
+                "detail_ref": "[String]", "_comment_detail_ref": "Absolute Zahlen für Vorjahreszeitraum."
+              }
+            ], "_comment_bars": "Liste der Top 5-6 Regionen."
+          }
+        },
+        {
+          "id": "gen_branche", "title": "Branchen", "subtitle": "[Top-Branche, z.B. 'Top: Öffentliche Verwaltung, 33,9%']",
+          "value": "[Dezimalwert]", "delta": "[Dezimalwert]", "valueType": "share", "deltaType": "pp", "provenance": "klassifiziert",
+          "interpretation": "[String]", "calculationNote": "[String]",
+          "detailData": {
+            "header": { "detail": "[Absolute Zahlen für Top-Branche]" },
+            "bars": [
+              {
+                "label": "[Name der Branche]", "value_pct": "[Zahlenwert]", "delta_pp": "[Zahlenwert]",
+                "detail_current": "[String]", "detail_ref": "[String]"
+              }
+            ], "_comment_bars": "Liste der Top 5-6 Branchen. Struktur wie bei Regionen."
+          }
+        },
+        {
+          "id": "bd_top_leistungen", "title": "Top-Leistungen", "subtitle": "Anteil je Leistung (Mehrfachnennung möglich)",
+          "value": "[Dezimalwert]", "delta": "[Dezimalwert]", "valueType": "share", "deltaType": "pp", "provenance": "klassifiziert",
+          "interpretation": ["String Array"], "_comment_interpretation": "Interpretation als Array von Strings.",
+          "calculationNote": "[String]", "_comment_calculationNote": "Hinweis auf Mehrfachnennung einfügen.",
+          "detailData": {
+            "header": {
+              "title": "[Top-Leistung, z.B. 'Top-Leistung: Software- / Plattformentwicklung']",
+              "value_pct": "[Zahlenwert]", "delta_pp": "[Zahlenwert]", "detail": "[String]"
+            },
+            "bars": [
+              {
+                "label": "[Name der Leistung]", "value_pct": "[Zahlenwert]", "delta_pp": "[Zahlenwert]",
+                "detail_current": "[String]", "detail_ref": "[String]"
+              }
+            ], "_comment_bars": "Liste der Top 7-8 Leistungen."
+          }
+        },
+        {
+          "id": "gen_vergabeordnung", "title": "Vergabeordnung", "subtitle": "[Top-Vergabeordnung, z.B. 'Top: Vergabeverordnung (VgV), 55,7%']",
+          "value": "[Dezimalwert]", "delta": "[Dezimalwert]", "valueType": "share", "deltaType": "pp", "provenance": "faktisch",
+          "interpretation": "[String]", "calculationNote": "[String]",
+          "detailData": [
+            {
+              "name": "[Name, z.B. 'Vergabeverordnung (VgV)']",
+              "valueCurrent": "[Dezimalwert]", "_comment_valueCurrent": "Aktueller Anteil.",
+              "valuePrevious": "[Dezimalwert]", "_comment_valuePrevious": "Anteil im Vorjahreszeitraum.",
+              "delta": "[Dezimalwert]", "_comment_delta": "Differenz in pp.",
+              "countCurrent": "[Zahlenwert]", "nCurrent": "[Zahlenwert]", "_comment_counts_current": "Absolute Zahlen aktuell.",
+              "countPrevious": "[Zahlenwert]", "nPrevious": "[Zahlenwert]", "_comment_counts_previous": "Absolute Zahlen Vorjahr."
+            }
+          ], "_comment_detailData": "Liste für VgV und UVgO."
+        }
+      ], "otherInsights": []
+    },
+    "QoQ": {
+      "view": "QoQ",
+      "_comment": "Struktur ist identisch zu YTD, aber alle Berechnungen beziehen sich auf den Vergleich des aktuellen Quartals mit dem direkten Vorquartal.",
+      "currentPeriodLabel": "[Aktuelles Quartal, z.B. Q3 2025]",
+      "previousPeriodLabel": "[Vorquartal, z.B. Q2 2025]",
+      "executiveSummaryPoints": [
+        { "title": "Marktaktivität", "icon": "graph", "description": "[...]" },
+        { "title": "KI-Fokus", "icon": "robot", "description": "[...]" },
+        { "title": "Strategische Beschaffung", "icon": "file", "description": "[...]" },
+        { "title": "Leistungs-Mix", "icon": "settings", "description": "[...]" },
+        { "title": "Regionale Verteilung", "icon": "map", "description": "[...]" },
+        { "title": "Top-Branchen", "icon": "building", "description": "[...]" }
+      ],
+      "topInsights": [
+      ],
+      "otherInsights": []
+    }
+  }
+}

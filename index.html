@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marktanalyse Öffentlicher Sektor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Applying a smooth, native-feeling font to the whole app */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-orange': '#F53D05',
+              'brand-background': '#F7F7F9',
+              'surface': '#FFFFFF',
+              'text-primary': '#1D1D1F',
+              'text-secondary': '#6E6E73',
+              'border-color': '#EAEAEB',
+              'diagram-1': '#484957',
+              'diagram-2': '#5F5D6C',
+              'diagram-3': '#9F9DA9',
+              'diagram-4': '#C9C8D0',
+            },
+            borderRadius: {
+              'xl': '1rem',
+              '2xl': '1.25rem',
+            },
+            boxShadow: {
+              'subtle': '0 4px 12px rgba(0,0,0,0.07)',
+            },
+            keyframes: {
+              fadeIn: {
+                'from': { opacity: '0', transform: 'translateY(8px)' },
+                'to': { opacity: '1', transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.4s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.1.2"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-background">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
