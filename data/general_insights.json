@@ -1,0 +1,1044 @@
+{
+  "_SCHEMA_INSTRUCTIONS_": "Template für den Reiter 'Überblick'. Enthält Marktaktivität, Primär-KI, Rahmenverträge, Regionen, Branchen, Top-Leistungen und Vergabeordnung.",
+  "YTD": {
+    "view": "YTD",
+    "currentPeriodLabel": "Q1-Q3 2025",
+    "previousPeriodLabel": "Q1-Q3 2024",
+    "executiveSummaryPoints": [
+      {
+        "title": "Marktaktivität",
+        "icon": "graph",
+        "description": "Im Q1-Q3 2025 wurden **159** Vergaben veröffentlicht (Q1-Q3 2024: **117**; **+36,0%**)."
+      },
+      {
+        "title": "KI-Fokus",
+        "icon": "robot",
+        "description": "Der Anteil an Primär-KI-Projekten steigt auf **37,7%** (Δ **+7,0 pp**)."
+      },
+      {
+        "title": "Strategische Beschaffung",
+        "icon": "file",
+        "description": "Rahmenverträge gewinnen an Bedeutung (**30,2%**, Δ **+6,3 pp**)."
+      },
+      {
+        "title": "Leistungs-Mix",
+        "icon": "settings",
+        "description": "Top-Leistung ist **Beratung und Unterstützung im Bereich KI / IT** (67,3%); stärkstes Wachstum bei **KI-Entwicklung und Implementierung** (+21,5 pp) und **Betrieb/Wartung** (+19,3 pp)."
+      },
+      {
+        "title": "Regionale Verteilung",
+        "icon": "map",
+        "description": "Top-Region bleibt **Bund** (27,0%, Δ -2,9 pp); **Bayern** gewinnt am stärksten (+6,4 pp)."
+      },
+      {
+        "title": "Top-Branchen",
+        "icon": "building",
+        "description": "**Öffentliche Verwaltung** bleibt größte Branche (32,7%), verliert jedoch deutlich (Δ -15,2 pp); **Gesundheitswesen** (+10,8 pp) und **Bildung und Forschung** (+7,9 pp) treiben das Wachstum."
+      }
+    ],
+    "topInsights": [
+      {
+        "id": "gen_activity",
+        "title": "Ausschreibungsaktivität",
+        "value": 159,
+        "delta": 0.35897,
+        "valueType": "count",
+        "deltaType": "rel",
+        "provenance": "faktisch",
+        "interpretation": [
+          "* **Zunahme** der Ausschreibungsanzahl (159 vs. 117; **36,0%**).",
+          "* Dies ist ein Indikator für **veränderte Marktdynamik** im betrachteten Zeitraum."
+        ],
+        "calculationNote": "Vergleich der absoluten Anzahl (Count) der Ausschreibungen in Q1-Q3 2025 (159) vs. Q1-Q3 2024 (117).",
+        "detailData": [
+          {
+            "window": "Q1-Q3/2024",
+            "count_tenders": 117
+          },
+          {
+            "window": "Q1-Q3/2025",
+            "count_tenders": 159
+          }
+        ]
+      },
+      {
+        "id": "gen_project_scope",
+        "title": "Projekt-Dimensionen",
+        "subtitle": "Volumen & Laufzeit",
+        "value": 1650750,
+        "delta": 1.06344,
+        "valueType": "currency",
+        "deltaType": "rel",
+        "provenance": "faktisch",
+        "interpretation": [
+          "* Median des ausgewiesenen Volumens: **1.650.750 €** (Ref.: 800.000 €; **+106,3%**).",
+          "* Volumen verfügbar in **32,7%** der Vergaben (Ref.: 36,8%); Median-Laufzeit **24.0 Monate** (Ref.: 24.0)."
+        ],
+        "detailData": {
+          "type": "project_dimensions",
+          "dimensions": {
+            "volume": {
+              "current": 1650750,
+              "ref": 800000,
+              "quote_current": 0.32704,
+              "quote_ref": 0.36752
+            },
+            "duration": {
+              "current": 24.0,
+              "ref": 24.0,
+              "unit": "Monate"
+            }
+          }
+        }
+      },
+      {
+        "id": "gen_award_criteria",
+        "title": "Zuschlagskriterien",
+        "subtitle": "Gewichtung Preis vs. Qualität",
+        "value": 0.49444,
+        "delta": 0.07297,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "dumbbell": [
+            {
+              "label": "Preis-Gewichtung",
+              "value_ref": 0.42148,
+              "value_current": 0.49444
+            },
+            {
+              "label": "Qualitäts-Gewichtung",
+              "value_ref": 0.57852,
+              "value_current": 0.50556
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_ai_primary",
+        "title": "Primär-KI-Anteil",
+        "subtitle": "Anteil in Q1-Q3 2025",
+        "value": 0.37736,
+        "delta": 0.06967,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "interpretation": [
+          "* Anteil **Primär-KI-Projekte**: **37,7%** (Ref.: 30,8%; Δ **+7,0 pp**).",
+          "* Der Wert basiert auf **LLM-Klassifizierung** und ist als **starker Indikator** zu interpretieren."
+        ],
+        "detailData": {
+          "barData": [
+            {
+              "name": "Q1-Q3/2024",
+              "value": 0.30769,
+              "n": 117
+            },
+            {
+              "name": "Q1-Q3/2025",
+              "value": 0.37736,
+              "n": 159
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_framework",
+        "title": "Rahmenverträge",
+        "subtitle": "Anteil in Q1-Q3 2025",
+        "value": 0.30189,
+        "delta": 0.06257,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "barData": [
+            {
+              "name": "Q1-Q3/2024",
+              "value": 0.23932,
+              "n": 117
+            },
+            {
+              "name": "Q1-Q3/2025",
+              "value": 0.30189,
+              "n": 159
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_region",
+        "title": "Regionen (Alle)",
+        "subtitle": "Top: Bund, 27,0%",
+        "value": 0.27044,
+        "delta": -0.02871,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "header": {
+            "detail": "43/159 in Q1-Q3 2025"
+          },
+          "bars": [
+            {
+              "label": "Bund",
+              "value_pct": 27.0,
+              "delta_pp": -2.9,
+              "detail_current": "43/159 in Q1-Q3 2025",
+              "detail_ref": "35/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Nordrhein-Westfalen",
+              "value_pct": 17.6,
+              "delta_pp": 1.4,
+              "detail_current": "28/159 in Q1-Q3 2025",
+              "detail_ref": "19/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Bayern",
+              "value_pct": 10.7,
+              "delta_pp": 6.4,
+              "detail_current": "17/159 in Q1-Q3 2025",
+              "detail_ref": "5/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Berlin",
+              "value_pct": 8.2,
+              "delta_pp": 1.3,
+              "detail_current": "13/159 in Q1-Q3 2025",
+              "detail_ref": "8/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Niedersachsen",
+              "value_pct": 5.7,
+              "delta_pp": -2.0,
+              "detail_current": "9/159 in Q1-Q3 2025",
+              "detail_ref": "9/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Baden-Württemberg",
+              "value_pct": 5.7,
+              "delta_pp": 3.1,
+              "detail_current": "9/159 in Q1-Q3 2025",
+              "detail_ref": "3/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Hessen",
+              "value_pct": 4.4,
+              "delta_pp": -1.6,
+              "detail_current": "7/159 in Q1-Q3 2025",
+              "detail_ref": "7/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Brandenburg",
+              "value_pct": 3.8,
+              "delta_pp": 1.2,
+              "detail_current": "6/159 in Q1-Q3 2025",
+              "detail_ref": "3/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "International",
+              "value_pct": 3.8,
+              "delta_pp": -5.6,
+              "detail_current": "6/159 in Q1-Q3 2025",
+              "detail_ref": "11/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Rheinland-Pfalz",
+              "value_pct": 3.8,
+              "delta_pp": 3.8,
+              "detail_current": "6/159 in Q1-Q3 2025",
+              "detail_ref": "0/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Sachsen-Anhalt",
+              "value_pct": 3.1,
+              "delta_pp": 1.4,
+              "detail_current": "5/159 in Q1-Q3 2025",
+              "detail_ref": "2/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Sachsen",
+              "value_pct": 2.5,
+              "delta_pp": -2.6,
+              "detail_current": "4/159 in Q1-Q3 2025",
+              "detail_ref": "6/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Hamburg",
+              "value_pct": 1.3,
+              "delta_pp": 0.5,
+              "detail_current": "2/159 in Q1-Q3 2025",
+              "detail_ref": "1/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Saarland",
+              "value_pct": 1.3,
+              "delta_pp": 1.3,
+              "detail_current": "2/159 in Q1-Q3 2025",
+              "detail_ref": "0/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Schweiz",
+              "value_pct": 0.6,
+              "delta_pp": -3.7,
+              "detail_current": "1/159 in Q1-Q3 2025",
+              "detail_ref": "5/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Österreich",
+              "value_pct": 0.6,
+              "delta_pp": 0.6,
+              "detail_current": "1/159 in Q1-Q3 2025",
+              "detail_ref": "0/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Schleswig-Holstein",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/159 in Q1-Q3 2025",
+              "detail_ref": "0/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Mecklenburg-Vorpommern",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/159 in Q1-Q3 2025",
+              "detail_ref": "0/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Thüringen",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/159 in Q1-Q3 2025",
+              "detail_ref": "0/117 in Q1-Q3 2024"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_branche",
+        "title": "Branchen (Top 10)",
+        "subtitle": "Top: Öffentliche Verwaltung, 32,7%",
+        "value": 0.32704,
+        "delta": -0.15159,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "header": {
+            "detail": "52/159 in Q1-Q3 2025"
+          },
+          "bars": [
+            {
+              "label": "Öffentliche Verwaltung",
+              "value_pct": 32.7,
+              "delta_pp": -15.2,
+              "detail_current": "52/159 in Q1-Q3 2025",
+              "detail_ref": "56/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Gesundheitswesen",
+              "value_pct": 17.6,
+              "delta_pp": 10.8,
+              "detail_current": "28/159 in Q1-Q3 2025",
+              "detail_ref": "8/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Bildung und Forschung",
+              "value_pct": 13.8,
+              "delta_pp": 7.9,
+              "detail_current": "22/159 in Q1-Q3 2025",
+              "detail_ref": "7/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Energie",
+              "value_pct": 5.7,
+              "delta_pp": 3.1,
+              "detail_current": "9/159 in Q1-Q3 2025",
+              "detail_ref": "3/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Verkehr und Mobilität",
+              "value_pct": 5.0,
+              "delta_pp": 4.2,
+              "detail_current": "8/159 in Q1-Q3 2025",
+              "detail_ref": "1/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Umwelt und Nachhaltigkeit",
+              "value_pct": 3.8,
+              "delta_pp": 0.4,
+              "detail_current": "6/159 in Q1-Q3 2025",
+              "detail_ref": "4/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Finanzwesen",
+              "value_pct": 3.8,
+              "delta_pp": 1.2,
+              "detail_current": "6/159 in Q1-Q3 2025",
+              "detail_ref": "3/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Informationstechnologie",
+              "value_pct": 3.1,
+              "delta_pp": -2.0,
+              "detail_current": "5/159 in Q1-Q3 2025",
+              "detail_ref": "6/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "IT-Sicherheit",
+              "value_pct": 2.5,
+              "delta_pp": 0.8,
+              "detail_current": "4/159 in Q1-Q3 2025",
+              "detail_ref": "2/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Sozialarbeit",
+              "value_pct": 1.9,
+              "delta_pp": 1.9,
+              "detail_current": "3/159 in Q1-Q3 2025",
+              "detail_ref": "0/117 in Q1-Q3 2024"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bd_top_leistungen",
+        "title": "Top-Leistungen",
+        "subtitle": "Anteil je Leistung (Mehrfachnennung möglich)",
+        "value": 0.67296,
+        "delta": 0.09176,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "interpretation": [
+          "**Beratung und Unterstützung im Bereich KI / IT** ist die meistgenannte Leistung (67,3%).",
+          "Innerhalb der Top-Leistungen zeigt **KI-Entwicklung und Implementierung** das stärkste Momentum (Δ 21,5 pp); **Training & Enablement** verliert relativ (Δ 0,0 pp)."
+        ],
+        "calculationNote": "LLM-basierte Klassifizierung je Ausschreibung; Mehrfachnennungen möglich (je Vergabe bis zu 3 Leistungs-Kategorien). Anteil = count/n der Zielperiode; Δ in Prozentpunkten zur Referenzperiode.",
+        "detailData": {
+          "header": {
+            "title": "Top-Leistung: Beratung und Unterstützung im Bereich KI / IT",
+            "value_pct": 67.3,
+            "delta_pp": 9.2,
+            "detail": "107/159 in Q1-Q3 2025"
+          },
+          "bars": [
+            {
+              "label": "Beratung und Unterstützung im Bereich KI / IT",
+              "value_pct": 67.3,
+              "delta_pp": 9.2,
+              "detail_current": "107/159 in Q1-Q3 2025",
+              "detail_ref": "68/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "KI-Entwicklung und Implementierung",
+              "value_pct": 61.6,
+              "delta_pp": 21.5,
+              "detail_current": "98/159 in Q1-Q3 2025",
+              "detail_ref": "47/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Betrieb und Wartung von KI-Systemen",
+              "value_pct": 41.5,
+              "delta_pp": 19.3,
+              "detail_current": "66/159 in Q1-Q3 2025",
+              "detail_ref": "26/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Plattformentwicklung",
+              "value_pct": 23.9,
+              "delta_pp": -3.5,
+              "detail_current": "38/159 in Q1-Q3 2025",
+              "detail_ref": "32/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Training & Enablement",
+              "value_pct": 23.3,
+              "delta_pp": 0.0,
+              "detail_current": "37/159 in Q1-Q3 2025",
+              "detail_ref": "27/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Datenmanagement und -aufbereitung für KI",
+              "value_pct": 13.8,
+              "delta_pp": 0.2,
+              "detail_current": "22/159 in Q1-Q3 2025",
+              "detail_ref": "16/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Proof of Concept (PoC) für KI-Anwendungen",
+              "value_pct": 13.2,
+              "delta_pp": 11.5,
+              "detail_current": "21/159 in Q1-Q3 2025",
+              "detail_ref": "2/117 in Q1-Q3 2024"
+            },
+            {
+              "label": "Forschung & Studien zu KI",
+              "value_pct": 11.9,
+              "delta_pp": -5.1,
+              "detail_current": "19/159 in Q1-Q3 2025",
+              "detail_ref": "20/117 in Q1-Q3 2024"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_vergabeordnung",
+        "title": "Vergabeordnung",
+        "subtitle": "Top: Vergabeverordnung (VgV), 57,9%",
+        "value": 0.57862,
+        "delta": -0.00258,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": [
+          {
+            "name": "Vergabeverordnung (VgV)",
+            "valueCurrent": 0.57862,
+            "valuePrevious": 0.5812,
+            "delta": -0.00258,
+            "countCurrent": 92,
+            "nCurrent": 159,
+            "countPrevious": 68,
+            "nPrevious": 117
+          },
+          {
+            "name": "Unterschwellenvergabeordnung (UVgO)",
+            "valueCurrent": 0.40881,
+            "valuePrevious": 0.37607,
+            "delta": 0.03274,
+            "countCurrent": 65,
+            "nCurrent": 159,
+            "countPrevious": 44,
+            "nPrevious": 117
+          }
+        ]
+      }
+    ],
+    "otherInsights": []
+  },
+  "QoQ": {
+    "view": "QoQ",
+    "_comment": "Struktur identisch zu YTD, Daten basieren auf Quartalsvergleich.",
+    "currentPeriodLabel": "Quartal 3 2025",
+    "previousPeriodLabel": "Quartal 2 2025",
+    "executiveSummaryPoints": [
+      {
+        "title": "Marktaktivität",
+        "icon": "graph",
+        "description": "Im Quartal 3 2025 wurden **62** Vergaben veröffentlicht (Quartal 2 2025: **61**; **+1,6%**)."
+      },
+      {
+        "title": "KI-Fokus",
+        "icon": "robot",
+        "description": "Der Primär-KI-Anteil steigt auf **50,0%** (Δ **+17,2 pp**)."
+      },
+      {
+        "title": "Strategische Beschaffung",
+        "icon": "file",
+        "description": "Rahmenverträge sind leicht rückläufig (**29,0%**, Δ -2,1 pp)."
+      },
+      {
+        "title": "Leistungs-Mix",
+        "icon": "settings",
+        "description": "Top-Leistung ist **KI-Entwicklung und Implementierung** (69,4%, Δ +16,9 pp); **Plattformentwicklung** verliert kurzfristig deutlich (-10,1 pp)."
+      },
+      {
+        "title": "Regionale Verteilung",
+        "icon": "map",
+        "description": "Der **Bund** legt kurzfristig zu (30,6%, Δ +9,3 pp); **Bayern** verliert Anteile (-8,3 pp)."
+      },
+      {
+        "title": "Top-Branchen",
+        "icon": "building",
+        "description": "**Öffentliche Verwaltung** bleibt vorn (29,0%), verliert im Quartalsvergleich (Δ -8,7 pp); **Gesundheitswesen** gewinnt deutlich (+11,1 pp)."
+      }
+    ],
+    "topInsights": [
+      {
+        "id": "gen_activity",
+        "title": "Ausschreibungsaktivität",
+        "value": 62,
+        "delta": 0.01639,
+        "valueType": "count",
+        "deltaType": "rel",
+        "provenance": "faktisch",
+        "interpretation": [
+          "* **Zunahme** der Ausschreibungsanzahl (62 vs. 61; **1,6%**).",
+          "* Dies ist ein Indikator für **veränderte Marktdynamik** im betrachteten Zeitraum."
+        ],
+        "calculationNote": "Vergleich der absoluten Anzahl (Count) der Ausschreibungen in Quartal 3 2025 (62) vs. Quartal 2 2025 (61).",
+        "detailData": [
+          {
+            "window": "2025Q2",
+            "count_tenders": 61
+          },
+          {
+            "window": "2025Q3",
+            "count_tenders": 62
+          }
+        ]
+      },
+      {
+        "id": "gen_project_scope",
+        "title": "Projekt-Dimensionen",
+        "subtitle": "Volumen & Laufzeit",
+        "value": 1000000,
+        "delta": -0.39188,
+        "valueType": "currency",
+        "deltaType": "rel",
+        "provenance": "faktisch",
+        "interpretation": [
+          "* Median des ausgewiesenen Volumens: **1.000.000 €** (Ref.: 1.644.300 €; **-39,2%**).",
+          "* Volumen verfügbar in **37,1%** der Vergaben (Ref.: 31,1%); Median-Laufzeit **24.0 Monate** (Ref.: 24.0)."
+        ],
+        "detailData": {
+          "type": "project_dimensions",
+          "dimensions": {
+            "volume": {
+              "current": 1000000,
+              "ref": 1644300,
+              "quote_current": 0.37097,
+              "quote_ref": 0.31148
+            },
+            "duration": {
+              "current": 24.0,
+              "ref": 24.0,
+              "unit": "Monate"
+            }
+          }
+        }
+      },
+      {
+        "id": "gen_award_criteria",
+        "title": "Zuschlagskriterien",
+        "subtitle": "Gewichtung Preis vs. Qualität",
+        "value": 0.45612,
+        "delta": -0.07001,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "dumbbell": [
+            {
+              "label": "Preis-Gewichtung",
+              "value_ref": 0.52614,
+              "value_current": 0.45612
+            },
+            {
+              "label": "Qualitäts-Gewichtung",
+              "value_ref": 0.47386,
+              "value_current": 0.54388
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_ai_primary",
+        "title": "Primär-KI-Anteil",
+        "subtitle": "Anteil in Quartal 3 2025",
+        "value": 0.5,
+        "delta": 0.17213,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "interpretation": [
+          "* Anteil **Primär-KI-Projekte**: **50,0%** (Ref.: 32,8%; Δ **+17,2 pp**).",
+          "* Der Wert basiert auf **LLM-Klassifizierung** und ist als **starker Indikator** zu interpretieren."
+        ],
+        "detailData": {
+          "barData": [
+            {
+              "name": "2025Q2",
+              "value": 0.32787,
+              "n": 61
+            },
+            {
+              "name": "2025Q3",
+              "value": 0.5,
+              "n": 62
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_framework",
+        "title": "Rahmenverträge",
+        "subtitle": "Anteil in Quartal 3 2025",
+        "value": 0.29032,
+        "delta": -0.02115,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "barData": [
+            {
+              "name": "2025Q2",
+              "value": 0.31148,
+              "n": 61
+            },
+            {
+              "name": "2025Q3",
+              "value": 0.29032,
+              "n": 62
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_region",
+        "title": "Regionen (Alle)",
+        "subtitle": "Top: Bund, 30,6%",
+        "value": 0.30645,
+        "delta": 0.09334,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "header": {
+            "detail": "19/62 in Q3 2025"
+          },
+          "bars": [
+            {
+              "label": "Bund",
+              "value_pct": 30.6,
+              "delta_pp": 9.3,
+              "detail_current": "19/62 in Q3 2025",
+              "detail_ref": "13/61 in Q2 2025"
+            },
+            {
+              "label": "Nordrhein-Westfalen",
+              "value_pct": 16.1,
+              "delta_pp": -5.2,
+              "detail_current": "10/62 in Q3 2025",
+              "detail_ref": "13/61 in Q2 2025"
+            },
+            {
+              "label": "Berlin",
+              "value_pct": 11.3,
+              "delta_pp": 0.0,
+              "detail_current": "7/62 in Q3 2025",
+              "detail_ref": "7/61 in Q2 2025"
+            },
+            {
+              "label": "International",
+              "value_pct": 8.1,
+              "delta_pp": 4.8,
+              "detail_current": "5/62 in Q3 2025",
+              "detail_ref": "2/61 in Q2 2025"
+            },
+            {
+              "label": "Bayern",
+              "value_pct": 6.5,
+              "delta_pp": -8.3,
+              "detail_current": "4/62 in Q3 2025",
+              "detail_ref": "9/61 in Q2 2025"
+            },
+            {
+              "label": "Hessen",
+              "value_pct": 4.8,
+              "delta_pp": 3.2,
+              "detail_current": "3/62 in Q3 2025",
+              "detail_ref": "1/61 in Q2 2025"
+            },
+            {
+              "label": "Brandenburg",
+              "value_pct": 4.8,
+              "delta_pp": 3.2,
+              "detail_current": "3/62 in Q3 2025",
+              "detail_ref": "1/61 in Q2 2025"
+            },
+            {
+              "label": "Baden-Württemberg",
+              "value_pct": 4.8,
+              "delta_pp": 1.5,
+              "detail_current": "3/62 in Q3 2025",
+              "detail_ref": "2/61 in Q2 2025"
+            },
+            {
+              "label": "Sachsen-Anhalt",
+              "value_pct": 3.2,
+              "delta_pp": 1.5,
+              "detail_current": "2/62 in Q3 2025",
+              "detail_ref": "1/61 in Q2 2025"
+            },
+            {
+              "label": "Niedersachsen",
+              "value_pct": 3.2,
+              "delta_pp": -6.6,
+              "detail_current": "2/62 in Q3 2025",
+              "detail_ref": "6/61 in Q2 2025"
+            },
+            {
+              "label": "Rheinland-Pfalz",
+              "value_pct": 3.2,
+              "delta_pp": -1.7,
+              "detail_current": "2/62 in Q3 2025",
+              "detail_ref": "3/61 in Q2 2025"
+            },
+            {
+              "label": "Sachsen",
+              "value_pct": 1.6,
+              "delta_pp": -1.7,
+              "detail_current": "1/62 in Q3 2025",
+              "detail_ref": "2/61 in Q2 2025"
+            },
+            {
+              "label": "Hamburg",
+              "value_pct": 1.6,
+              "delta_pp": 0.0,
+              "detail_current": "1/62 in Q3 2025",
+              "detail_ref": "1/61 in Q2 2025"
+            },
+            {
+              "label": "Saarland",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/62 in Q3 2025",
+              "detail_ref": "0/61 in Q2 2025"
+            },
+            {
+              "label": "Schweiz",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/62 in Q3 2025",
+              "detail_ref": "0/61 in Q2 2025"
+            },
+            {
+              "label": "Österreich",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/62 in Q3 2025",
+              "detail_ref": "0/61 in Q2 2025"
+            },
+            {
+              "label": "Schleswig-Holstein",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/62 in Q3 2025",
+              "detail_ref": "0/61 in Q2 2025"
+            },
+            {
+              "label": "Mecklenburg-Vorpommern",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/62 in Q3 2025",
+              "detail_ref": "0/61 in Q2 2025"
+            },
+            {
+              "label": "Thüringen",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "0/62 in Q3 2025",
+              "detail_ref": "0/61 in Q2 2025"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_branche",
+        "title": "Branchen (Top 10)",
+        "subtitle": "Top: Öffentliche Verwaltung, 29,0%",
+        "value": 0.29032,
+        "delta": -0.08673,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "header": {
+            "detail": "18/62 in Q3 2025"
+          },
+          "bars": [
+            {
+              "label": "Öffentliche Verwaltung",
+              "value_pct": 29.0,
+              "delta_pp": -8.7,
+              "detail_current": "18/62 in Q3 2025",
+              "detail_ref": "23/61 in Q2 2025"
+            },
+            {
+              "label": "Gesundheitswesen",
+              "value_pct": 21.0,
+              "delta_pp": 11.1,
+              "detail_current": "13/62 in Q3 2025",
+              "detail_ref": "6/61 in Q2 2025"
+            },
+            {
+              "label": "Bildung und Forschung",
+              "value_pct": 11.3,
+              "delta_pp": -8.4,
+              "detail_current": "7/62 in Q3 2025",
+              "detail_ref": "12/61 in Q2 2025"
+            },
+            {
+              "label": "Energie",
+              "value_pct": 8.1,
+              "delta_pp": 3.1,
+              "detail_current": "5/62 in Q3 2025",
+              "detail_ref": "3/61 in Q2 2025"
+            },
+            {
+              "label": "Umwelt und Nachhaltigkeit",
+              "value_pct": 4.8,
+              "delta_pp": 1.6,
+              "detail_current": "3/62 in Q3 2025",
+              "detail_ref": "2/61 in Q2 2025"
+            },
+            {
+              "label": "Finanzwesen",
+              "value_pct": 3.2,
+              "delta_pp": 3.2,
+              "detail_current": "2/62 in Q3 2025",
+              "detail_ref": "0/61 in Q2 2025"
+            },
+            {
+              "label": "IT-Sicherheit",
+              "value_pct": 3.2,
+              "delta_pp": -1.7,
+              "detail_current": "2/62 in Q3 2025",
+              "detail_ref": "3/61 in Q2 2025"
+            },
+            {
+              "label": "Verkehr und Mobilität",
+              "value_pct": 3.2,
+              "delta_pp": 1.6,
+              "detail_current": "2/62 in Q3 2025",
+              "detail_ref": "1/61 in Q2 2025"
+            },
+            {
+              "label": "Informationstechnologie",
+              "value_pct": 1.6,
+              "delta_pp": 1.6,
+              "detail_current": "1/62 in Q3 2025",
+              "detail_ref": "0/61 in Q2 2025"
+            },
+            {
+              "label": "Tourismus",
+              "value_pct": 1.6,
+              "delta_pp": -3.3,
+              "detail_current": "1/62 in Q3 2025",
+              "detail_ref": "3/61 in Q2 2025"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bd_top_leistungen",
+        "title": "Top-Leistungen",
+        "subtitle": "Anteil je Leistung (Mehrfachnennung möglich)",
+        "value": 0.69355,
+        "delta": 0.16896,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "interpretation": [
+          "**KI-Entwicklung und Implementierung** ist die meistgenannte Leistung (69,4%).",
+          "Innerhalb der Top-Leistungen zeigt **KI-Entwicklung und Implementierung** das stärkste Momentum (Δ 16,9 pp); **Training & Enablement** verliert relativ (Δ -3,6 pp)."
+        ],
+        "calculationNote": "LLM-basierte Klassifizierung je Ausschreibung; Mehrfachnennungen möglich (je Vergabe bis zu 3 Leistungs-Kategorien). Anteil = count/n der Zielperiode; Δ in Prozentpunkten zur Referenzperiode.",
+        "detailData": {
+          "header": {
+            "title": "Top-Leistung: KI-Entwicklung und Implementierung",
+            "value_pct": 69.4,
+            "delta_pp": 16.9,
+            "detail": "43/62 in Q3 2025"
+          },
+          "bars": [
+            {
+              "label": "KI-Entwicklung und Implementierung",
+              "value_pct": 69.4,
+              "delta_pp": 16.9,
+              "detail_current": "43/62 in Q3 2025",
+              "detail_ref": "32/61 in Q2 2025"
+            },
+            {
+              "label": "Beratung und Unterstützung im Bereich KI / IT",
+              "value_pct": 64.5,
+              "delta_pp": -1.1,
+              "detail_current": "40/62 in Q3 2025",
+              "detail_ref": "40/61 in Q2 2025"
+            },
+            {
+              "label": "Betrieb und Wartung von KI-Systemen",
+              "value_pct": 46.8,
+              "delta_pp": 5.8,
+              "detail_current": "29/62 in Q3 2025",
+              "detail_ref": "25/61 in Q2 2025"
+            },
+            {
+              "label": "Training & Enablement",
+              "value_pct": 22.6,
+              "delta_pp": -3.6,
+              "detail_current": "14/62 in Q3 2025",
+              "detail_ref": "16/61 in Q2 2025"
+            },
+            {
+              "label": "Plattformentwicklung",
+              "value_pct": 17.7,
+              "delta_pp": -10.1,
+              "detail_current": "11/62 in Q3 2025",
+              "detail_ref": "17/61 in Q2 2025"
+            },
+            {
+              "label": "Proof of Concept (PoC) für KI-Anwendungen",
+              "value_pct": 17.7,
+              "delta_pp": 9.5,
+              "detail_current": "11/62 in Q3 2025",
+              "detail_ref": "5/61 in Q2 2025"
+            },
+            {
+              "label": "Datenmanagement und -aufbereitung für KI",
+              "value_pct": 14.5,
+              "delta_pp": -3.5,
+              "detail_current": "9/62 in Q3 2025",
+              "detail_ref": "11/61 in Q2 2025"
+            },
+            {
+              "label": "Forschung & Studien zu KI",
+              "value_pct": 11.3,
+              "delta_pp": -5.1,
+              "detail_current": "7/62 in Q3 2025",
+              "detail_ref": "10/61 in Q2 2025"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_vergabeordnung",
+        "title": "Vergabeordnung",
+        "subtitle": "Top: Vergabeverordnung (VgV), 59,7%",
+        "value": 0.59677,
+        "delta": 0.023,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": [
+          {
+            "name": "Vergabeverordnung (VgV)",
+            "valueCurrent": 0.59677,
+            "valuePrevious": 0.57377,
+            "delta": 0.023,
+            "countCurrent": 37,
+            "nCurrent": 62,
+            "countPrevious": 35,
+            "nPrevious": 61
+          },
+          {
+            "name": "Unterschwellenvergabeordnung (UVgO)",
+            "valueCurrent": 0.3871,
+            "valuePrevious": 0.40984,
+            "delta": -0.02274,
+            "countCurrent": 24,
+            "nCurrent": 62,
+            "countPrevious": 25,
+            "nPrevious": 61
+          }
+        ]
+      }
+    ],
+    "otherInsights": []
+  }
+}

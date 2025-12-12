@@ -3,8 +3,15 @@ import { formatPercent } from '../utils/formatters.ts';
 
 interface DumbbellDataItem {
     label: string;
-    ytd_2024_pct: number;
-    ytd_2025_pct: number;
+    // Generic keys for any period comparison (YoY or QoQ)
+    value_ref: number;     // e.g. Previous Year or Previous Quarter (0-100)
+    value_current: number; // e.g. Current Year or Current Quarter (0-100)
+    n_ref?: number;
+    n_current?: number;
+    
+    // Legacy support (optional, can be removed if all JSONs are updated)
+    ytd_2024_pct?: number;
+    ytd_2025_pct?: number;
     n_2024?: number;
     n_2025?: number;
 }
@@ -20,15 +27,20 @@ export const DumbbellChart: React.FC<DumbbellChartProps> = ({ data }) => {
 
     return (
         <div className="space-y-6">
-            {data.map(item => {
-                const val1 = item.ytd_2024_pct;
-                const val2 = item.ytd_2025_pct;
+            {data.map((item, index) => {
+                // Support both new generic keys and old specific keys for backward compatibility
+                const val1 = item.value_ref ?? item.ytd_2024_pct ?? 0;
+                const val2 = item.value_current ?? item.ytd_2025_pct ?? 0;
+                
+                const n1 = item.n_ref ?? item.n_2024;
+                const n2 = item.n_current ?? item.n_2025;
+
                 const left = Math.min(val1, val2);
                 const width = Math.abs(val1 - val2);
                 const isIncrease = val2 > val1;
 
                 return (
-                    <div key={item.label}>
+                    <div key={`${item.label}-${index}`}>
                         <div className="flex justify-between items-center mb-1">
                             <p className="text-sm font-medium text-text-primary">{item.label}</p>
                             <p className="text-xs text-text-secondary">
@@ -36,31 +48,31 @@ export const DumbbellChart: React.FC<DumbbellChartProps> = ({ data }) => {
                             </p>
                         </div>
                         <div className="relative h-6 flex items-center">
-                            {/* Line */}
+                            {/* Base Line */}
                             <div className="absolute bg-gray-200 h-1 w-full rounded-full"></div>
-                            {/* Range line */}
+                            {/* Range line (Delta) */}
                             <div
                                 className={`absolute h-1 ${isIncrease ? 'bg-green-300' : 'bg-red-300'} rounded-full`}
                                 style={{ left: `${left}%`, width: `${width}%` }}
                             ></div>
-                            {/* Point 1 */}
+                            {/* Point 1 (Reference) */}
                             <div
                                 className="absolute w-4 h-4 bg-diagram-3 rounded-full border-2 border-white shadow-sm"
                                 style={{ left: `calc(${val1}% - 8px)` }}
-                                title={`Vorperiode: ${formatPercent(val1 / 100)} ${item.n_2024 ? `(n=${item.n_2024})`: ''}`}
+                                title={`Referenz: ${formatPercent(val1 / 100)} ${n1 ? `(n=${n1})`: ''}`}
                             ></div>
-                            {/* Point 2 */}
+                            {/* Point 2 (Current) */}
                              <div
                                 className="absolute w-4 h-4 bg-brand-orange rounded-full border-2 border-white shadow-sm"
                                 style={{ left: `calc(${val2}% - 8px)` }}
-                                title={`Aktuell: ${formatPercent(val2 / 100)} ${item.n_2025 ? `(n=${item.n_2025})`: ''}`}
+                                title={`Aktuell: ${formatPercent(val2 / 100)} ${n2 ? `(n=${n2})`: ''}`}
                             ></div>
                         </div>
                     </div>
                 );
             })}
              <div className="flex justify-end space-x-4 pt-2 text-xs text-text-secondary">
-                <div className="flex items-center"><div className="w-3 h-3 rounded-full bg-diagram-3 mr-2"></div>Vorperiode</div>
+                <div className="flex items-center"><div className="w-3 h-3 rounded-full bg-diagram-3 mr-2"></div>Referenz</div>
                 <div className="flex items-center"><div className="w-3 h-3 rounded-full bg-brand-orange mr-2"></div>Aktuell</div>
             </div>
         </div>

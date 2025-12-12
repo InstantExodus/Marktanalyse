@@ -1,0 +1,136 @@
+{
+  "_SCHEMA_INSTRUCTIONS_": "Template für den Reiter 'Business Development'. Enthält Chatbot (Bars mit Hidden-Regionen), Zuschlag (Dumbbell) und Benchmarks (Branchen, Primär-KI, RV).",
+  "YTD": {
+    "view": "YTD",
+    "executiveSummaryPoints": [
+      { "title": "Fokus-Thema: Chatbot", "icon": "chat", "description": "..." },
+      { "title": "Wettbewerbsintensität", "icon": "trending-down", "description": "..." },
+      { "title": "Professionalisierung (Primär-KI)", "icon": "robot", "description": "..." },
+      { "title": "Wertschöpfung (Rahmenverträge)", "icon": "file", "description": "..." },
+      { "title": "Branchenfokus", "icon": "building", "description": "..." }
+    ],
+    "cards": [
+      {
+        "id": "bd_chatbot",
+        "title": "Fokus-Thema: Chatbot",
+        "subtitle": "Gesamtanteil",
+        "value": 0.0, "_comment_value": "Dezimalwert",
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "...",
+        "detailData": {
+           "header": { "detail": "[X]/[N] in [Zeitraum]" },
+           "bars": [
+             { 
+               "label": "[Region]", 
+               "value_pct": 0.0, "_comment": "0-100", 
+               "delta_pp": 0.0, 
+               "detail_current": "[X]/[N] ...", 
+               "detail_ref": "..." 
+             }
+           ],
+           "hidden_zero_regions_label": "[String: 'Weitere Regionen ohne Vorkommen...']"
+        }
+      },
+      {
+        "id": "bd_award",
+        "title": "Zuschlagskriterien – Preisanteil",
+        "subtitle": "Median in [Zeitraum]",
+        "value": 0.50,
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+           "method": "...",
+           "dumbbell": [
+             { 
+               "label": "Gesamt", 
+               "value_ref": 0.0, "_comment": "0-100",
+               "value_current": 0.0, 
+               "n_ref": 0, 
+               "n_current": 0
+             }
+           ]
+        }
+      },
+      {
+        "id": "bd_branch_bench",
+        "title": "Branchen – Top Entwicklungen (vs. Gesamt)",
+        "subtitle": "[Zeitraum]",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "...",
+          "items": [
+             {
+               "title": "[Branche] – [Leistung]",
+               "delta_vs_benchmark_pp": 0.0,
+               "focus_delta_pp": 0.0,
+               "benchmark_delta_pp": 0.0,
+               "confidence": "hoch"
+             }
+          ],
+          "interpretation": ["[Text]"]
+        }
+      },
+      {
+        "id": "bd_primary_bench",
+        "title": "Primär-KI – Leistungsprofil (vs. Gesamt)",
+        "subtitle": "[Zeitraum]",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+           "method": "...",
+           "items": [
+             {
+               "title": "Primär – [Leistung]",
+               "delta_vs_benchmark_pp": 0.0,
+               "focus_delta_pp": 0.0,
+               "benchmark_delta_pp": 0.0,
+               "confidence": "mittel"
+             }
+           ],
+           "interpretation": ["[Text]"]
+        }
+      },
+      {
+        "id": "bd_rv_bench",
+        "title": "Rahmenverträge – Leistungsprofil",
+        "subtitle": "[Zeitraum]",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+           "method": "...",
+           "items": [
+             {
+               "title": "Rahmenverträge – [Leistung]",
+               "delta_vs_benchmark_pp": 0.0,
+               "focus_delta_pp": 0.0,
+               "benchmark_delta_pp": 0.0,
+               "confidence": "hoch"
+             }
+           ],
+           "interpretation": ["[Text]"]
+        }
+      }
+    ]
+  },
+  "QoQ": {
+    "view": "QoQ",
+    "_comment": "Gleiche Struktur wie YTD.",
+    "executiveSummaryPoints": [],
+    "cards": []
+  }
+}

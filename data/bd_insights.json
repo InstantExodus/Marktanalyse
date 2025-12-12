@@ -1,0 +1,324 @@
+{
+  "YTD": {
+    "view": "YTD",
+    "executiveSummaryPoints": [
+      { "title": "Fokus-Thema: Chatbot", "icon": "chat", "description": "Das Thema 'Chatbot' entwickelt sich regional sehr unterschiedlich und scheint eher von einzelnen landesspezifischen Initiativen als von einem bundesweiten Trend getragen zu werden." },
+      { "title": "Wettbewerbsintensität", "icon": "trending-down", "description": "Der Preisanteil bei Zuschlagskriterien nimmt tendenziell zu, was auf einen intensiveren Wettbewerb hindeuten könnte, insbesondere bei Vergaben unterhalb der EU-Schwelle (UVgO)." },
+      { "title": "Professionalisierung (Primär-KI)", "icon": "robot", "description": "Primär-Projekte werden stärker von Beratung begleitet und gehen häufiger in den Betrieb, was auf eine zunehmende Professionalisierung hindeutet." },
+      { "title": "Wertschöpfung (Rahmenverträge)", "icon": "file", "description": "Bei Rahmenverträgen gewinnen Enablement und Betrieb an Bedeutung, während reine Entwicklungsanteile zurückgehen, was eine Verlagerung hin zu langfristiger Wertschöpfung signalisiert." },
+      { "title": "Branchenfokus", "icon": "building", "description": "Branchenfokus: Die öffentliche Verwaltung diversifiziert ihre Projekte, während im Gesundheitswesen der Betrieb von Lösungen in den Vordergrund rückt." }
+    ],
+    "cards": [
+      {
+        "id": "bd_chatbot",
+        "title": "Fokus-Thema: Chatbot",
+        "subtitle": "Gesamtanteil Chatbot-Themen",
+        "value": 0.165,
+        "delta": 0.05,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "Anteil der Ausschreibungen, deren Texte das Thema 'Chatbot' enthalten (semantisch geparst).",
+        "detailData": {
+          "header": { "detail": "19/115 in Halbjahr 1 2025" },
+          "bars": [
+            { "label": "Mecklenburg-Vorpommern", "value_pct": 100.0, "delta_pp": 100.0, "detail_current": "1/1 in Halbjahr 1 2025", "detail_ref": "0/0 in Referenzperiode" },
+            { "label": "Baden-Württemberg", "value_pct": 50.0, "delta_pp": 50.0, "detail_current": "2/4 in Halbjahr 1 2025", "detail_ref": "0/1 in Referenzperiode" },
+            { "label": "Bayern", "value_pct": 50.0, "delta_pp": 25.0, "detail_current": "7/14 in Halbjahr 1 2025", "detail_ref": "1/4 in Referenzperiode" },
+            { "label": "Niedersachsen", "value_pct": 42.9, "delta_pp": 22.9, "detail_current": "3/7 in Halbjahr 1 2025", "detail_ref": "1/5 in Referenzperiode" },
+            { "label": "Rheinland-Pfalz", "value_pct": 28.6, "delta_pp": 28.6, "detail_current": "2/7 in Halbjahr 1 2025", "detail_ref": "0/0 in Referenzperiode" },
+            { "label": "Hessen", "value_pct": 25.0, "delta_pp": -35.0, "detail_current": "1/4 in Halbjahr 1 2025", "detail_ref": "3/5 in Referenzperiode" },
+            { "label": "Berlin", "value_pct": 18.2, "delta_pp": 18.2, "detail_current": "2/11 in Halbjahr 1 2025", "detail_ref": "0/6 in Referenzperiode" },
+            { "label": "Bund", "value_pct": 7.4, "delta_pp": -6.9, "detail_current": "2/27 in Halbjahr 1 2025", "detail_ref": "3/21 in Referenzperiode" },
+            { "label": "Nordrhein-Westfalen", "value_pct": 4.8, "delta_pp": -9.5, "detail_current": "1/21 in Halbjahr 1 2025", "detail_ref": "2/14 in Referenzperiode" }
+          ],
+          "hidden_zero_regions_label": "Weitere Regionen ohne Vorkommen: Brandenburg, Hamburg, International, Saarland, Sachsen …"
+        }
+      },
+      {
+        "id": "bd_award",
+        "title": "Zuschlagskriterien – Preisanteil",
+        "subtitle": "Median Preisanteil (H1 2025)",
+        "value": 0.50,
+        "delta": 0.10,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "method": "Faktisch geparst aus Vergabeunterlagen. Mediane je Periode. Dumbbell zeigt H1 2024 vs. H1 2025.",
+          "dumbbell": [
+            { "label": "Gesamt", "value_ref": 40.0, "n_ref": 57, "value_current": 50.0, "n_current": 84 },
+            { "label": "UVgO", "value_ref": 32.5, "n_ref": 24, "value_current": 50.0, "n_current": 37 },
+            { "label": "VgV", "value_ref": 40.0, "n_ref": 32, "value_current": 45.0, "n_current": 46 }
+          ],
+          "interpretation": [
+            "Der **Preis** gewinnt insgesamt an **Gewicht**; die Bewertung wirkt **wettbewerbsintensiver**.",
+            "Unter **UVgO** ist der Anstieg **klarer ausgeprägt**; VgV erhöht sich moderat."
+          ]
+        }
+      },
+      {
+        "id": "bd_branch_bench",
+        "title": "Branchen – Top Entwicklungen (vs. Gesamt)",
+        "subtitle": "Halbjahr 1 2025 vs. Halbjahr 1 2024",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Vergleich der prozentualen Veränderung (pp) einer Branchen-Leistungs-Kombination mit der Veränderung der Leistung im Gesamtmarkt.",
+          "items": [
+            {
+              "title": "Gesundheitswesen – Betrieb & Wartung",
+              "delta_vs_benchmark_pp": 49.8,
+              "focus_delta_pp": 55.6,
+              "benchmark_delta_pp": 5.8,
+              "confidence": "hoch"
+            },
+            {
+              "title": "Öffentliche Verwaltung – Datenmanagement",
+              "delta_vs_benchmark_pp": 15.0,
+              "focus_delta_pp": 15.6,
+              "benchmark_delta_pp": 0.6,
+              "confidence": "hoch"
+            },
+            {
+              "title": "Bildung & Forschung – Forschung/Studien",
+              "delta_vs_benchmark_pp": 9.9,
+              "focus_delta_pp": 7.9,
+              "benchmark_delta_pp": -2.0,
+              "confidence": "mittel"
+            }
+          ],
+          "interpretation": [
+            "Im **Gesundheitswesen** gewinnt der **Betrieb von KI-Lösungen** **überproportional an Bedeutung**.",
+            "**Datenmanagement** in der **öffentlichen Verwaltung** wächst ebenfalls **schneller als der Marktdurchschnitt**.",
+            "**Forschungsthemen** in **Bildung & Forschung** halten sich **entgegen dem allgemeinen Markttrend**."
+          ]
+        }
+      },
+      {
+        "id": "bd_primary_bench",
+        "title": "Primär-KI – Leistungsprofil (vs. Gesamt)",
+        "subtitle": "Halbjahr 1 2025 vs. Halbjahr 1 2024",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Vergleich der Anteilsveränderung (pp) von Leistungen innerhalb des Primär-KI-Clusters mit der Veränderung im Gesamtmarkt.",
+          "items": [
+            {
+              "title": "Primär – Beratung/Unterstützung",
+              "delta_vs_benchmark_pp": 13.5,
+              "focus_delta_pp": 25.1,
+              "benchmark_delta_pp": 11.6,
+              "confidence": "hoch"
+            },
+            {
+              "title": "Primär – Training & Enablement",
+              "delta_vs_benchmark_pp": 12.3,
+              "focus_delta_pp": 11.1,
+              "benchmark_delta_pp": -1.2,
+              "confidence": "mittel"
+            },
+            {
+              "title": "Primär – Betrieb & Wartung",
+              "delta_vs_benchmark_pp": 3.8,
+              "focus_delta_pp": 22.5,
+              "benchmark_delta_pp": 18.7,
+              "confidence": "hoch"
+            }
+          ],
+          "interpretation": [
+            "**Primär-KI-Projekte** werden signifikant häufiger von **Beratung und Enablement begleitet** als der Marktdurchschnitt.",
+            "Dies deutet auf einen **höheren strategischen und transformativen Charakter** dieser Vorhaben hin."
+          ]
+        }
+      },
+      {
+        "id": "bd_rv_bench",
+        "title": "Rahmenverträge – Leistungsprofil (vs. Nicht-RV)",
+        "subtitle": "Halbjahr 1 2025 vs. Halbjahr 1 2024",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "method": "Vergleich der Anteilsveränderung (pp) von Leistungen innerhalb von Rahmenverträgen mit der Veränderung bei Nicht-Rahmenverträgen.",
+          "items": [
+            {
+              "title": "Rahmenverträge – Enablement",
+              "delta_vs_benchmark_pp": 20.1,
+              "focus_delta_pp": 22.6,
+              "benchmark_delta_pp": 2.5,
+              "confidence": "mittel"
+            },
+            {
+              "title": "Rahmenverträge – KI-Entwicklung",
+              "delta_vs_benchmark_pp": -15.4,
+              "focus_delta_pp": -25.4,
+              "benchmark_delta_pp": -10.0,
+              "confidence": "hoch"
+            }
+          ],
+          "interpretation": [
+            "**Enablement-Leistungen** gewinnen in Rahmenverträgen **überproportional an Bedeutung**.",
+            "**Klassische KI-Entwicklung** verliert zwar überall an Anteil, in Rahmenverträgen ist dieser Rückgang jedoch **besonders stark ausgeprägt**."
+          ]
+        }
+      }
+    ]
+  },
+  "QoQ": {
+    "view": "QoQ",
+    "executiveSummaryPoints": [
+      {
+        "title": "Leistungs-Mix",
+        "icon": "settings",
+        "description": "Kurzfristig verschiebt sich der Fokus bei den Leistungen weg von klassischer Entwicklung hin zu Betrieb und Datenmanagement, was auf eine Optimierung bestehender Systeme hindeuten könnte."
+      },
+      {
+        "title": "Fokus-Thema: Chatbot",
+        "icon": "chat",
+        "description": "Die Nachfrage nach Chatbot-Lösungen erscheint kurzfristig volatil; Zuwächse in einzelnen Regionen deuten eher auf wenige Großprojekte als auf eine breite Marktdynamik hin."
+      },
+      {
+        "title": "Wettbewerbsintensität",
+        "icon": "trending-down",
+        "description": "Der Median des Preisanteils bleibt im Quartalsvergleich stabil, was kurzfristig auf keine wesentliche Änderung der Vergabepraxis schließen lässt."
+      },
+      {
+        "title": "Wissens-Transfer (Primär-KI)",
+        "icon": "robot",
+        "description": "Enablement gewinnt bei Primär-KI-Projekten kurzfristig an Bedeutung, was auf einen verstärkten Fokus auf Wissens- und Technologietransfer hindeutet."
+      },
+      {
+        "title": "Daten-Fokus (Rahmenverträge)",
+        "icon": "file",
+        "description": "Im Bereich Rahmenverträge gewinnen Datenmanagement-Themen an Relevanz, was auf eine Konsolidierung der Dateninfrastruktur hindeuten könnte."
+      },
+      {
+        "title": "Branchenfokus",
+        "icon": "building",
+        "description": "Datenmanagement und Betrieb werden in der öffentlichen Verwaltung kurzfristig wichtiger, was auf eine Konsolidierungsphase hindeutet."
+      }
+    ],
+    "cards": [
+      {
+        "id": "bd_chatbot",
+        "title": "Fokus-Thema: Chatbot",
+        "subtitle": "Gesamtanteil Chatbot-Themen",
+        "value": 0.22,
+        "delta": 0.11,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "Anteil der Ausschreibungen mit Chatbot-Bezug.",
+        "detailData": {
+          "header": { "detail": "15/68 in Q2 2025" },
+          "bars": [
+            { "label": "Hessen", "value_pct": 100.0, "delta_pp": 100.0, "detail_current": "1/1 in Quartal 2 2025", "detail_ref": "0/3 in Referenzperiode" },
+            { "label": "Mecklenburg-Vorpommern", "value_pct": 100.0, "delta_pp": 100.0, "detail_current": "1/1 in Quartal 2 2025", "detail_ref": "0/0 in Referenzperiode" },
+            { "label": "Baden-Württemberg", "value_pct": 50.0, "delta_pp": 50.0, "detail_current": "2/4 in Quartal 2 2025", "detail_ref": "0/0 in Referenzperiode" },
+            { "label": "Niedersachsen", "value_pct": 50.0, "delta_pp": 50.0, "detail_current": "3/6 in Quartal 2 2025", "detail_ref": "0/1 in Referenzperiode" },
+            { "label": "Bayern", "value_pct": 44.4, "delta_pp": -15.6, "detail_current": "4/9 in Quartal 2 2025", "detail_ref": "3/5 in Referenzperiode" },
+            { "label": "Rheinland-Pfalz", "value_pct": 25.0, "delta_pp": -8.3, "detail_current": "1/4 in Quartal 2 2025", "detail_ref": "1/3 in Referenzperiode" },
+            { "label": "Berlin", "value_pct": 20.0, "delta_pp": 3.3, "detail_current": "1/5 in Quartal 2 2025", "detail_ref": "1/6 in Referenzperiode" },
+            { "label": "Bund", "value_pct": 13.3, "delta_pp": 13.3, "detail_current": "2/15 in Quartal 2 2025", "detail_ref": "0/12 in Referenzperiode" },
+            { "label": "Nordrhein-Westfalen", "value_pct": 7.1, "delta_pp": 7.1, "detail_current": "1/14 in Quartal 2 2025", "detail_ref": "0/7 in Referenzperiode" }
+          ],
+          "hidden_zero_regions_label": "Weitere Regionen ohne Vorkommen: Brandenburg, Hamburg, International, Saarland, Sachsen …"
+        }
+      },
+      {
+        "id": "bd_award",
+        "title": "Zuschlagskriterien – Preisanteil",
+        "subtitle": "Median Preisanteil (Q2 2025)",
+        "value": 0.50,
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "method": "Faktisch geparst; Quartalsvergleich der Mediane.",
+          "mini_bars": [
+            { "label": "Quartal 1 2025", "median_pct": 50.0, "n": 34 },
+            { "label": "Quartal 2 2025", "median_pct": 50.0, "n": 50 }
+          ],
+          "interpretation": [
+            "Gesamtbild **stabil**.",
+            "Die **YoY-Aussage** ist derzeit **aussagekräftiger** als QoQ."
+          ]
+        }
+      },
+      {
+        "id": "bd_branch_bench",
+        "title": "Branchen – Top Entwicklungen (vs. Gesamt)",
+        "subtitle": "Quartal 2 2025 vs. Quartal 1 2025",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Quartalsvergleich der prozentualen Veränderung (pp) einer Kombination mit der des Gesamtmarktes.",
+          "items": [
+            {
+              "title": "Bildung & Forschung – Betrieb & Wartung",
+              "delta_vs_benchmark_pp": 18.3,
+              "focus_delta_pp": 26.2,
+              "benchmark_delta_pp": 7.9,
+              "confidence": "niedrig"
+            }
+          ],
+          "interpretation": [
+            "Kurzfristig zeigt sich ein **starker Zuwachs** im **Betrieb von KI-Lösungen** im **Bildungssektor**.",
+            "Die **geringe Fallzahl** mahnt zur **Vorsicht** bei der Interpretation."
+          ]
+        }
+      },
+      {
+        "id": "bd_primary_bench",
+        "title": "Primär-KI – Leistungsprofil (vs. Gesamt)",
+        "subtitle": "Quartal 2 2025 vs. Quartal 1 2025",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "",
+          "items": [],
+          "interpretation": ["Keine **signifikanten Abweichungen** im Quartalsvergleich."]
+        }
+      },
+      {
+        "id": "bd_rv_bench",
+        "title": "Rahmenverträge – Leistungsprofil (vs. Nicht-RV)",
+        "subtitle": "Quartal 2 2025 vs. Quartal 1 2025",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "method": "Quartalsvergleich der Anteilsveränderung (pp) innerhalb RVs mit Nicht-RVs.",
+          "items": [
+            {
+              "title": "Rahmenverträge – Datenmanagement",
+              "delta_vs_benchmark_pp": 22.5,
+              "focus_delta_pp": 25.0,
+              "benchmark_delta_pp": 2.5,
+              "confidence": "niedrig"
+            }
+          ],
+          "interpretation": ["**Datenmanagement** gewinnt in Rahmenverträgen kurzfristig **stark an Bedeutung**."]
+        }
+      }
+    ]
+  }
+}

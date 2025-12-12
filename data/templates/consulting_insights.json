@@ -1,0 +1,122 @@
+{
+  "_SCHEMA_INSTRUCTIONS_": "Template für den Reiter 'Consulting'. Enthält Fokus Beratung (Mini-Bars), Zuschlag (Dumbbell), Branchen-Spotlights (Benchmark) und Profile (Bars).",
+  "YTD": {
+    "view": "YTD",
+    "executiveSummaryPoints": [
+      {
+        "title": "Nachfrage Beratung",
+        "icon": "users",
+        "description": "[Text]"
+      },
+      {
+        "title": "Wettbewerbsintensität",
+        "icon": "trending-down",
+        "description": "[Text]"
+      },
+      {
+        "title": "Branchenfokus",
+        "icon": "building",
+        "description": "[Text]"
+      }
+    ],
+    "cards": [
+      {
+        "id": "consulting_focus_beratung",
+        "title": "Fokus‑Thema: Beratung & Unterstützung",
+        "subtitle": "Anteil in [Zeitraum]",
+        "value": 0.0, "_comment_value": "Dezimalwert (z.B. 0.69)",
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "Leistung per LLM aus Ausschreibungstexten klassifiziert.",
+        "detailData": {
+          "mini_bars": [
+            { "label": "[Label Vorjahr]", "median_pct": 0.0, "n": 0, "_comment": "median_pct ist hier 0-100" },
+            { "label": "[Label Aktuell]", "median_pct": 0.0, "n": 0 }
+          ]
+        },
+        "interpretation": ["[Markdown Text]"]
+      },
+      {
+        "id": "bd_award_consulting",
+        "title": "Zuschlagskriterien – Preisanteil",
+        "subtitle": "Median in [Zeitraum]",
+        "value": 0.0,
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+           "method": "Faktisch geparst...",
+           "dumbbell": [
+              { 
+                "label": "Gesamt", 
+                "value_ref": 0.0, "_comment": "0-100", 
+                "value_current": 0.0, 
+                "n_ref": 0, 
+                "n_current": 0 
+              },
+              { 
+                "label": "UVgO", 
+                "value_ref": 0.0, 
+                "value_current": 0.0 
+              }
+           ]
+        }
+      },
+      {
+        "id": "consulting_branches",
+        "title": "Fokus‑Thema: Beratung – Branchen‑Spotlights",
+        "subtitle": "Abweichung zur Marktveränderung",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "...",
+          "items": [
+            {
+              "title": "[Branche] – Beratung/Unterstützung",
+              "delta_vs_benchmark_pp": 0.0,
+              "focus_delta_pp": 0.0,
+              "benchmark_delta_pp": 0.0,
+              "confidence": "hoch"
+            }
+          ]
+        },
+        "interpretation": ["[Text]"]
+      },
+      {
+        "id": "consulting_profiles",
+        "title": "Gefragte Consulting‑Profile",
+        "subtitle": "Top: [Profilname]",
+        "value": 0.0,
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "...",
+        "detailData": {
+          "bars": [
+             { 
+               "label": "[Profilname]", 
+               "value_pct": 0.0, "_comment": "0-100",
+               "delta_pp": 0.0, 
+               "detail_current": "[X]/[N] in [Zeitraum]", 
+               "detail_ref": "[X]/[N] in [Vorjahr]" 
+             }
+          ]
+        },
+        "interpretation": ["[Text]"]
+      }
+    ]
+  },
+  "QoQ": {
+    "view": "QoQ",
+    "_comment": "Gleiche Struktur wie YTD.",
+    "executiveSummaryPoints": [],
+    "cards": []
+  }
+}

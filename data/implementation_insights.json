@@ -1,0 +1,269 @@
+{
+  "YTD": {
+    "view": "YTD",
+    "executiveSummaryPoints": [
+      {
+        "title": "Betrieb & Wartung",
+        "icon": "settings",
+        "description": "Betrieb & Wartung gewinnt breit an Bedeutung, insbesondere in der Öffentlichen Verwaltung und auf Bundesebene."
+      },
+      {
+        "title": "Plattformentwicklung",
+        "icon": "code",
+        "description": "Der Anteil von Software- & Plattformentwicklung ist leicht rückläufig, hält sich aber in der Öffentlichen Verwaltung und beim Bund besser als der Marktdurchschnitt."
+      },
+      {
+        "title": "Marktreife",
+        "icon": "graph",
+        "description": "Die Verschiebung von reiner Entwicklung hin zu Betrieb signalisiert einen reiferen Markt, in dem bestehende Lösungen stabilisiert und gewartet werden."
+      },
+      {
+        "title": "Tool-Spezifität",
+        "icon": "tool",
+        "description": "Die Nennung spezifischer Hosting-Tools nimmt zu, bleibt jedoch selten. Bei Programmiersprachen bleiben die Anforderungen weiterhin Tool-agnostisch."
+      }
+    ],
+    "cards": [
+      {
+        "id": "impl_ops",
+        "title": "Betrieb & Wartung – Top-Entwicklungen (vs. Ø Markt)",
+        "subtitle": "Halbjahr 1 2025 vs. Halbjahr 1 2024",
+        "value": 0.409,
+        "delta": 0.186,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Branche/Region: Vergleicht die Veränderung der Leistung mit dem Durchschnitt aller Branchen bzw. aller Regionen derselben Periode (zeigt Über-/Unterdurchschnitt)",
+          "items": [
+            {
+              "title": "Region – Bund",
+              "delta_vs_benchmark_pp": 2.5,
+              "focus_delta_pp": 21.2,
+              "benchmark_delta_pp": 18.6,
+              "confidence": "mittel"
+            },
+            {
+              "title": "Region – Nordrhein-Westfalen",
+              "delta_vs_benchmark_pp": -13.9,
+              "focus_delta_pp": 4.8,
+              "benchmark_delta_pp": 18.6,
+              "confidence": "mittel"
+            },
+            {
+              "title": "Branche – Öffentliche Verwaltung",
+              "delta_vs_benchmark_pp": 5.7,
+              "focus_delta_pp": 22.8,
+              "benchmark_delta_pp": 18.6,
+              "confidence": "hoch"
+            }
+          ]
+        },
+        "interpretation": [
+          "**Betrieb & Wartung** legt **breit zu**; die **Öffentliche Verwaltung** treibt den Trend.",
+          "Auf **Bundesebene über Markt**, **Nordrhein-Westfalen unter Markt**."
+        ]
+      },
+      {
+        "id": "impl_platform",
+        "title": "Software- / Plattformentwicklung – Top-Entwicklungen",
+        "subtitle": "Halbjahr 1 2025 vs. Halbjahr 1 2024",
+        "value": 0.870,
+        "delta": -0.031,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Branche/Region: Vergleicht die Veränderung der Leistung mit dem Durchschnitt aller Branchen bzw. aller Regionen derselben Periode (zeigt Über-/Unterdurchschnitt)",
+          "items": [
+            {
+              "title": "Region – Bund",
+              "delta_vs_benchmark_pp": 2.1,
+              "focus_delta_pp": -1.0,
+              "benchmark_delta_pp": -3.1,
+              "confidence": "mittel"
+            },
+            {
+              "title": "Branche – Öffentliche Verwaltung",
+              "delta_vs_benchmark_pp": 4.1,
+              "focus_delta_pp": 0.2,
+              "benchmark_delta_pp": -3.1,
+              "confidence": "hoch"
+            }
+          ]
+        },
+        "interpretation": [
+          "**Plattformanteile** sind **leicht rückläufig**; die **Öffentliche Verwaltung** hält sich **besser als der Markt**.",
+          "Der **Bund** zeigt eine **milde Outperformance** bei insgesamt stabilem Niveau."
+        ]
+      },
+      {
+        "id": "impl_tools",
+        "title": "Tool-Spezifität",
+        "subtitle": "Anteil mit konkreter Tool-Nennung",
+        "value": 0.214,
+        "delta": -0.031,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "header": {
+            "title": "Tool-Spezifität",
+            "value_pct": 21.4,
+            "delta_pp": -3.1,
+            "detail": "H1/2025 vs. H1/2024"
+          },
+          "method": "Analyse der Nennungshäufigkeit von spezifischen Tools vs. generischen Kategorien in Ausschreibungstexten (LLM-klassifiziert). Granularität auf Kategorie-Ebene.",
+          "dumbbell": [
+            {
+              "label": "Programmiersprachen",
+              "value_ref": 24.4,
+              "value_current": 21.4,
+              "n_ref": 86,
+              "n_current": 117
+            },
+            {
+              "label": "Hosting",
+              "value_ref": 8.4,
+              "value_current": 23.8,
+              "n_ref": 83,
+              "n_current": 126
+            }
+          ]
+        },
+        "interpretation": [
+          "**Spezifische Hosting-Tools** werden im Jahresvergleich **häufiger** genannt (+15.4 pp). Der Datenbasis bleibt jedoch extrem gering und kaum interpretierbar.",
+          "Bei **Programmiersprachen** ist der Anteil spezifischer Nennungen **leicht rückläufig**."
+        ]
+      }
+    ]
+  },
+  "QoQ": {
+    "view": "QoQ",
+    "executiveSummaryPoints": [
+      {
+        "title": "Betrieb & Wartung",
+        "icon": "settings",
+        "description": "Der kurzfristige Aufwärtstrend bei Betrieb & Wartung setzt sich fort, angetrieben durch die Öffentliche Verwaltung."
+      },
+      {
+        "title": "Plattformentwicklung",
+        "icon": "code",
+        "description": "Plattformentwicklung verliert im Quartalsvergleich weiter an Anteil, die Öffentliche Verwaltung bleibt aber ein stabiler Nachfrager."
+      },
+      {
+        "title": "Konsolidierungsphase",
+        "icon": "graph",
+        "description": "Die Daten deuten auf eine Konsolidierungsphase hin: Weniger Neubau, mehr Pflege und Optimierung bestehender KI-Systeme."
+      },
+      {
+        "title": "Tool-Spezifität",
+        "icon": "tool",
+        "description": "Kurzfristig werden spezifische Programmiersprachen häufiger genannt. Die Nachfrage bleibt jedoch überwiegend tool-agnostisch; bei den wenigen Sprachnennungen dominiert Python."
+      }
+    ],
+    "cards": [
+      {
+        "id": "impl_ops",
+        "title": "Betrieb & Wartung – Top-Entwicklungen",
+        "subtitle": "Quartal 2 2025 vs. Quartal 1 2025",
+        "value": 0.441,
+        "delta": 0.079,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Branche/Region: Vergleicht die Veränderung der Leistung mit dem Durchschnitt aller Branchen bzw. aller Regionen derselben Periode.",
+          "items": [
+            {
+              "title": "Region – Bund",
+              "delta_vs_benchmark_pp": 4.6,
+              "focus_delta_pp": 12.5,
+              "benchmark_delta_pp": 7.9,
+              "confidence": "niedrig"
+            },
+             {
+              "title": "Branche – Öffentliche Verwaltung",
+              "delta_vs_benchmark_pp": 8.5,
+              "focus_delta_pp": 16.5,
+              "benchmark_delta_pp": 7.9,
+              "confidence": "mittel"
+            }
+          ]
+        },
+        "interpretation": [
+          "**Kurzfristig** setzt sich der **Aufwärtsimpuls** fort; **Öffentliche Verwaltung über Markt**.",
+          "Der **Bund** zeigt eine **zusätzliche Belebung** – Aussage vorsichtig lesen (**kleine Basis**)."
+        ]
+      },
+      {
+        "id": "impl_platform",
+        "title": "Software- / Plattformentwicklung – Top-Entwicklungen",
+        "subtitle": "Quartal 2 2025 vs. Quartal 1 2025",
+        "value": 0.779,
+        "delta": -0.061,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Branche/Region: Vergleicht die Veränderung der Leistung mit dem Durchschnitt aller Branchen bzw. aller Regionen derselben Periode.",
+          "items": [
+            {
+              "title": "Region – Bund",
+              "delta_vs_benchmark_pp": 1.1,
+              "focus_delta_pp": -5.0,
+              "benchmark_delta_pp": -6.1,
+              "confidence": "niedrig"
+            },
+            {
+              "title": "Branche – Öffentliche Verwaltung",
+              "delta_vs_benchmark_pp": 6.4,
+              "focus_delta_pp": 0.3,
+              "benchmark_delta_pp": -6.1,
+              "confidence": "niedrig"
+            }
+          ]
+        },
+        "interpretation": [
+          "**Plattformanteile geben im Quartal nach**; die **Öffentliche Verwaltung** hält sich **relativ besser als der Markt**.",
+          "Region **Bund** leicht **über Markt**, aber auf **niedriger Datenbasis**."
+        ]
+      },
+      {
+        "id": "impl_tools",
+        "title": "Tool-Spezifität",
+        "subtitle": "Anteil mit konkreter Tool-Nennung",
+        "value": 0.239,
+        "delta": 0.066,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "header": {
+            "title": "Tool-Spezifität",
+            "value_pct": 23.9,
+            "delta_pp": 6.6,
+            "detail": "Q2/2025 vs. Q1/2025"
+          },
+          "method": "Analyse der Nennungshäufigkeit von spezifischen Tools.",
+          "dumbbell": [
+            {
+              "label": "Programmiersprachen",
+              "value_ref": 17.4,
+              "value_current": 23.9
+            },
+            {
+              "label": "Hosting",
+              "value_ref": 25.9,
+              "value_current": 22.2
+            }
+          ]
+        },
+        "interpretation": [
+           "Kurzfristig nimmt die Nennung **spezifischer Programmiersprachen** zu (+6.6 pp). Der Datenbestand bleibt jedoch zu gering für konkrete Schlußfolgerungen",
+           "Im **Hosting-Bereich** nimmt die Spezifität leicht ab."
+        ]
+      }
+    ]
+  }
+}

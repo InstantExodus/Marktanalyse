@@ -1,0 +1,243 @@
+{
+  "_SCHEMA_INSTRUCTIONS_": "Template für den Reiter 'Überblick'. Enthält Marktaktivität, Primär-KI, Rahmenverträge, Regionen, Branchen, Top-Leistungen und Vergabeordnung.",
+  "YTD": {
+    "view": "YTD",
+    "currentPeriodLabel": "[z.B. Q1-Q4 2025]",
+    "previousPeriodLabel": "[z.B. Q1-Q4 2024]",
+    "executiveSummaryPoints": [
+      {
+        "title": "Marktaktivität",
+        "icon": "graph",
+        "description": "[Text zur Entwicklung der Gesamtzahl]"
+      },
+      {
+        "title": "KI-Fokus",
+        "icon": "robot",
+        "description": "[Text zum Anteil Primär-KI]"
+      },
+      {
+        "title": "Strategische Beschaffung",
+        "icon": "file",
+        "description": "[Text zu Rahmenverträgen]"
+      },
+      {
+        "title": "Leistungs-Mix",
+        "icon": "settings",
+        "description": "[Text zu Top-Leistungen]"
+      },
+      {
+        "title": "Regionale Verteilung",
+        "icon": "map",
+        "description": "[Text zu Regionen]"
+      },
+      {
+        "title": "Top-Branchen",
+        "icon": "building",
+        "description": "[Text zu Branchen]"
+      }
+    ],
+    "topInsights": [
+      {
+        "id": "gen_activity",
+        "title": "Ausschreibungsaktivität",
+        "value": 0, "_comment_value": "Absolute Anzahl (Integer). QUELLE: Count per 'QuartalJahr'.",
+        "delta": 0.0, "_comment_delta": "Relative Veränderung (z.B. 0.42 für +42%)",
+        "valueType": "count",
+        "deltaType": "rel",
+        "provenance": "faktisch",
+        "interpretation": ["[Markdown Text]"],
+        "calculationNote": "Vergleich der absoluten Anzahl.",
+        "detailData": [
+          { "window": "[Label Vorjahr]", "count_tenders": 0 },
+          { "window": "[Label Aktuell]", "count_tenders": 0 }
+        ]
+      },
+      {
+        "id": "gen_project_scope",
+        "title": "Projekt-Dimensionen",
+        "subtitle": "Volumen & Laufzeit",
+        "value": 0, "_comment_value": "Median Volumen (Currency). QUELLE: 'Vol. €'.",
+        "delta": 0.0,
+        "valueType": "currency",
+        "deltaType": "rel",
+        "provenance": "faktisch",
+        "interpretation": ["[Text]"],
+        "detailData": {
+           "type": "project_dimensions",
+           "dimensions": {
+             "volume": { 
+               "current": 0, 
+               "ref": 0, 
+               "quote_current": 0.0, "_comment": "Quote als Dezimal (0.2 = 20%)",
+               "quote_ref": 0.0 
+             },
+             "duration": { "current": 0, "ref": 0, "unit": "Monate", "_comment_dur": "QUELLE: 'Beginn' bis 'Ende' in Monaten." }
+           }
+        }
+      },
+      {
+        "id": "gen_award_criteria",
+        "title": "Zuschlagskriterien",
+        "subtitle": "Gewichtung Preis vs. Qualität",
+        "value": 0.0, "_comment_val": "QUELLE: 'Zuschlagskriterien' (geparst/regex).",
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "dumbbell": [
+            { "label": "Preis-Gewichtung", "value_ref": 0.0, "value_current": 0.0 },
+            { "label": "Qualitäts-Gewichtung", "value_ref": 0.0, "value_current": 0.0 }
+          ]
+        }
+      },
+      {
+        "id": "gen_ai_primary",
+        "title": "Primär-KI-Anteil",
+        "subtitle": "Anteil in [Zeitraum]",
+        "value": 0.0, "_comment_value": "Anteil als Dezimal (z.B. 0.25 für 25%). QUELLE: 'KI_Primärprojekt' = 'Ja' / Gesamt.",
+        "delta": 0.0, "_comment_delta": "Veränderung in Prozentpunkten (pp)",
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "interpretation": ["[Markdown Text]"],
+        "detailData": {
+          "barData": [
+            { "name": "[Label Vorjahr]", "value": 0.0, "n": 0 },
+            { "name": "[Label Aktuell]", "value": 0.0, "n": 0 }
+          ]
+        }
+      },
+      {
+        "id": "gen_framework",
+        "title": "Rahmenverträge",
+        "subtitle": "Anteil in [Zeitraum]",
+        "value": 0.0, "_comment_val": "QUELLE: 'Rahmenvertrag' = 'ja' / Gesamt.",
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "barData": [
+             { "name": "[Label Vorjahr]", "value": 0.0, "n": 0 },
+             { "name": "[Label Aktuell]", "value": 0.0, "n": 0 }
+          ]
+        }
+      },
+      {
+        "id": "gen_region",
+        "title": "Regionen (Alle)",
+        "subtitle": "Top: [Name], [Prozent]%",
+        "value": 0.0, "_comment_val": "QUELLE: 'Endkunden-Region'.",
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "header": { "detail": "[X]/[N] in [Zeitraum]" },
+          "bars": [
+            {
+              "label": "[Region Name]",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "[X]/[N] in [Zeitraum]",
+              "detail_ref": "[X]/[N] in [Vorjahr]"
+            }
+          ], "_comment_bars": "WICHTIG: Liste ALLE unique Regionen auf, die im Datensatz vorkommen (nicht nur Top 5)."
+        }
+      },
+      {
+        "id": "gen_branche",
+        "title": "Branchen (Top 10)",
+        "subtitle": "Top: [Name], [Prozent]%",
+        "value": 0.0, "_comment_val": "QUELLE: 'Branche_Auftraggeber_KAT'.",
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "header": { "detail": "[X]/[N] in [Zeitraum]" },
+          "bars": [
+             {
+              "label": "[Branche Name]",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "...",
+              "detail_ref": "..."
+            }
+          ], "_comment_bars": "WICHTIG: Liste die Top 10 Branchen auf."
+        }
+      },
+      {
+        "id": "bd_top_leistungen",
+        "title": "Top-Leistungen",
+        "subtitle": "Anteil je Leistung (Mehrfachnennung möglich)",
+        "value": 0.0, "_comment_val": "QUELLE: Spalten 'Liefergegenstand_KAT_1' bis '_3'.",
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "interpretation": ["[Markdown Text]"],
+        "detailData": {
+          "header": {
+            "title": "Top-Leistung: [Name]",
+            "value_pct": 0.0,
+            "delta_pp": 0.0,
+            "detail": "[X]/[N] in [Zeitraum]"
+          },
+          "bars": [
+            {
+              "label": "[Leistung Name]",
+              "value_pct": 0.0,
+              "delta_pp": 0.0,
+              "detail_current": "...",
+              "detail_ref": "..."
+            }
+          ]
+        }
+      },
+      {
+        "id": "gen_vergabeordnung",
+        "title": "Vergabeordnung",
+        "subtitle": "Top: [Name], [Prozent]%",
+        "value": 0.0, "_comment_val": "QUELLE: 'Vergabeordnung'.",
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": [
+          {
+            "name": "Vergabeverordnung (VgV)",
+            "valueCurrent": 0.0,
+            "valuePrevious": 0.0,
+            "delta": 0.0,
+            "countCurrent": 0,
+            "nCurrent": 0,
+            "countPrevious": 0,
+            "nPrevious": 0
+          },
+          {
+            "name": "Unterschwellenvergabeordnung (UVgO)",
+            "valueCurrent": 0.0,
+            "valuePrevious": 0.0,
+            "delta": 0.0,
+            "countCurrent": 0,
+            "nCurrent": 0,
+            "countPrevious": 0,
+            "nPrevious": 0
+          }
+        ]
+      }
+    ],
+    "otherInsights": []
+  },
+  "QoQ": {
+    "view": "QoQ",
+    "_comment": "Struktur identisch zu YTD, Daten basieren auf Quartalsvergleich.",
+    "currentPeriodLabel": "[z.B. Q4 2025]",
+    "previousPeriodLabel": "[z.B. Q3 2025]",
+    "executiveSummaryPoints": [],
+    "topInsights": [],
+    "otherInsights": []
+  }
+}

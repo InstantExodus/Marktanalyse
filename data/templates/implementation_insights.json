@@ -1,0 +1,118 @@
+{
+  "_SCHEMA_INSTRUCTIONS_": "Template für den Reiter 'Implementierung'. Enthält Betrieb & Wartung, Plattformentwicklung (Benchmark-Listen) und Tool-Spezifität (Dumbbell).",
+  "YTD": {
+    "view": "YTD",
+    "executiveSummaryPoints": [
+      {
+        "title": "Betrieb & Wartung",
+        "icon": "settings",
+        "description": "[Text]"
+      },
+      {
+        "title": "Plattformentwicklung",
+        "icon": "code",
+        "description": "[Text]"
+      },
+      {
+        "title": "Marktreife",
+        "icon": "graph",
+        "description": "[Text]"
+      },
+      {
+        "title": "Tool-Spezifität",
+        "icon": "tool",
+        "description": "[Text]"
+      }
+    ],
+    "cards": [
+      {
+        "id": "impl_ops",
+        "title": "Betrieb & Wartung – Top-Entwicklungen (vs. Ø Markt)",
+        "subtitle": "[Zeitraum] vs. [Vorjahr]",
+        "value": 0.0, "_comment_value": "Anteil Betrieb & Wartung Gesamtmarkt (Dezimal)",
+        "delta": 0.0, "_comment_delta": "Veränderung Gesamtmarkt (pp)",
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Branche/Region: Vergleicht die Veränderung der Leistung mit dem Durchschnitt aller Branchen bzw. aller Regionen derselben Periode.",
+          "items": [
+            {
+              "title": "[Segment Name, z.B. Region - Bund]",
+              "delta_vs_benchmark_pp": 0.0, "_comment": "Fokus_Delta - Benchmark_Delta",
+              "focus_delta_pp": 0.0, "_comment": "Veränderung im Segment",
+              "benchmark_delta_pp": 0.0, "_comment": "Veränderung im Gesamtmarkt",
+              "confidence": "[hoch|mittel|niedrig]"
+            }
+          ]
+        },
+        "interpretation": ["[Markdown Text]"]
+      },
+      {
+        "id": "impl_platform",
+        "title": "Software- / Plattformentwicklung – Top-Entwicklungen",
+        "subtitle": "[Zeitraum]",
+        "value": 0.0,
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "...",
+          "items": [
+             {
+              "title": "[Segment Name]",
+              "delta_vs_benchmark_pp": 0.0,
+              "focus_delta_pp": 0.0,
+              "benchmark_delta_pp": 0.0,
+              "confidence": "hoch"
+            }
+          ]
+        },
+        "interpretation": ["[Text]"]
+      },
+      {
+        "id": "impl_tools",
+        "title": "Tool-Spezifität",
+        "subtitle": "Anteil mit konkreter Tool-Nennung",
+        "value": 0.0,
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "header": {
+            "title": "Tool-Spezifität",
+            "value_pct": 0.0, "_comment": "Prozentwert (0-100)",
+            "delta_pp": 0.0,
+            "detail": "[Zeitraum]"
+          },
+          "method": "Analyse der Nennungshäufigkeit von spezifischen Tools vs. generischen Kategorien.",
+          "dumbbell": [
+            {
+              "label": "Programmiersprachen",
+              "value_ref": 0.0, "_comment": "Wert Referenzperiode (0-100)",
+              "value_current": 0.0, "_comment": "Wert Aktuell (0-100)",
+              "n_ref": 0,
+              "n_current": 0
+            },
+            {
+              "label": "Hosting",
+              "value_ref": 0.0,
+              "value_current": 0.0,
+              "n_ref": 0,
+              "n_current": 0
+            }
+          ]
+        },
+        "interpretation": ["[Text]"]
+      }
+    ]
+  },
+  "QoQ": {
+    "view": "QoQ",
+    "_comment": "Gleiche Struktur wie YTD.",
+    "executiveSummaryPoints": [],
+    "cards": []
+  }
+}

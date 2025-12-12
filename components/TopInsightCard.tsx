@@ -11,7 +11,7 @@ import { SimpleBarChart } from './SimpleBarChart.tsx';
 const getFormattedValue = (insight: TopInsight): string => {
     switch (insight.valueType) {
         case 'share': return formatPercent(insight.value);
-        case 'currency': return formatCurrency(insight.value);
+        case 'currency': return formatCurrency(insight.value, 'EUR', 0);
         case 'count': return formatNumber(insight.value);
         default: return String(insight.value);
     }
@@ -37,6 +37,64 @@ const ProvenancePill: React.FC<{ type: TopInsight['provenance'] }> = ({ type }) 
     return <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${styles[type]}`}>{capitalizedType}</span>;
 };
 
+// --- SUB-COMPONENTS FOR SPECIFIC VISUALIZATIONS ---
+
+const ProjectDimensionsView: React.FC<{ data: any, currentPeriodLabel: string, previousPeriodLabel: string }> = ({ data, currentPeriodLabel, previousPeriodLabel }) => {
+    const { volume, duration } = data.dimensions;
+
+    const MetricBox = ({ label, current, refVal, unit, formatFn, deltaType = 'abs' }: any) => {
+        const delta = current - refVal;
+        const deltaColor = delta === 0 ? 'text-gray-500' : (delta > 0 ? 'text-green-600' : 'text-red-600');
+        
+        return (
+            <div className="bg-gray-50 p-3 rounded-lg border border-gray-100 flex flex-col justify-between h-full">
+                <span className="text-xs text-text-secondary uppercase font-bold tracking-wider mb-1">{label}</span>
+                <div className="flex items-baseline gap-2">
+                    <span className="text-xl font-bold text-text-primary">{formatFn ? formatFn(current) : current}</span>
+                    <span className="text-sm text-text-secondary">{unit}</span>
+                </div>
+                <div className="text-xs text-text-secondary mt-1 flex justify-between items-center">
+                    <span>{previousPeriodLabel}: {formatFn ? formatFn(refVal) : refVal}</span>
+                    <span className={`font-semibold ${deltaColor}`}>
+                        {delta > 0 ? '+' : ''}{formatFn && deltaType === 'pct' ? formatPercent(delta) : delta}
+                    </span>
+                </div>
+            </div>
+        );
+    };
+
+    return (
+        <div className="space-y-4 pt-2">
+            {/* Volume Highlight Box */}
+            <div className="bg-brand-background border border-border-color rounded-xl p-4">
+                <div className="flex justify-between items-start mb-2">
+                    <div className="text-xs text-text-secondary uppercase font-bold tracking-wider">Median Volumen</div>
+                    {/* Explicit Quote in Header */}
+                    <div className="text-[10px] uppercase font-bold text-blue-700 bg-blue-50 px-2 py-1 rounded border border-blue-100">
+                        Datenbasis: {formatPercent(volume.quote_current)} der Vergaben
+                    </div>
+                </div>
+                <div className="flex items-baseline gap-2 mb-1">
+                    <span className="text-3xl font-bold text-text-primary">{formatCurrency(volume.current, 'EUR', 0)}</span>
+                </div>
+                <div className="flex justify-between text-xs text-text-secondary pt-2 border-t border-gray-200">
+                    <span>{previousPeriodLabel}: {formatCurrency(volume.ref, 'EUR', 0)}</span>
+                    <span>(Datenbasis Vorjahr: {formatPercent(volume.quote_ref)})</span>
+                </div>
+            </div>
+
+            {/* Duration Box (Full Width now) */}
+            <MetricBox 
+                label="Ø Laufzeit" 
+                current={duration.current} 
+                refVal={duration.ref} 
+                unit={duration.unit}
+            />
+        </div>
+    );
+};
+
+
 // --- DETAIL VISUALIZATION COMPONENT ---
 
 const DetailContent: React.FC<{ 
@@ -48,6 +106,11 @@ const DetailContent: React.FC<{
 
     const renderVisualization = () => {
         if (!detailData) return null;
+
+        // Specific render logic for Project Dimensions (New)
+        if (detailData.type === 'project_dimensions') {
+            return <ProjectDimensionsView data={detailData} currentPeriodLabel={currentPeriodLabel || 'Aktuell'} previousPeriodLabel={previousPeriodLabel || 'Vorjahr'} />;
+        }
 
         // Specific render logic for general insights cards
         switch (insight.id) {
@@ -96,8 +159,34 @@ const DetailContent: React.FC<{
         if (detailData.items) return <BenchmarkList items={detailData.items} />;
         if (detailData.bars) return <LeistungenBarChart data={detailData.bars} />;
         if (detailData.dumbbell) return <DumbbellChart data={detailData.dumbbell} />;
+        
+        // Fallback for old mini_bars (if still used somewhere)
         if (detailData.mini_bars) {
-            const chartData = detailData.mini_bars.map((d: any) => ({ name: d.label, value: d.median_pct / 100, n: d.n }));
+             const chartData = detailData.mini_bars.map((d: any) => ({ 
+                name: d.label, 
+                value: d.median_pct ?? 0, 
+                displayValue: d.value_display, 
+                n: d.n 
+            }));
+            
+            if (chartData.some((d: any) => d.displayValue)) {
+                return (
+                     <div className="space-y-3 pt-2">
+                        {chartData.map((item: any, idx: number) => (
+                            <div key={idx} className="flex flex-col">
+                                <div className="flex justify-between text-sm text-text-secondary mb-1">
+                                    <span>{item.name}</span>
+                                    <span className="font-bold text-text-primary">{item.displayValue}</span>
+                                </div>
+                                <div className="w-full bg-gray-100 rounded-full h-2">
+                                     <div className="bg-brand-orange h-2 rounded-full" style={{ width: `${Math.min(item.value * 100, 100)}%` }}></div>
+                                </div>
+                                {item.n && <span className="text-xs text-right text-gray-400 mt-0.5">(n={item.n})</span>}
+                            </div>
+                        ))}
+                     </div>
+                )
+            }
             return <SimpleBarChart data={chartData} valueType="share" />;
         }
         

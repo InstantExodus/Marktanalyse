@@ -1,0 +1,248 @@
+{
+  "YTD": {
+    "view": "YTD",
+    "executiveSummaryPoints": [
+      {
+        "title": "Nachfrage Beratung",
+        "icon": "users",
+        "description": "Beratungs- und Unterstützungsleistungen zeigen im Jahresvergleich eine stabile bis leicht steigende Nachfrage."
+      },
+      {
+        "title": "Wettbewerbsintensität",
+        "icon": "trending-down",
+        "description": "Der Preisanteil bei Zuschlagskriterien nimmt tendenziell zu, was auf einen intensiveren Wettbewerb hindeuten könnte, insbesondere bei Vergaben unterhalb der EU-Schwelle (UVgO)."
+      },
+      {
+        "title": "Branchenfokus",
+        "icon": "building",
+        "description": "Die Nachfrage nach Beratung in der Öffentlichen Verwaltung wächst stärker als in allen anderen Branchen."
+      }
+    ],
+    "cards": [
+      {
+        "id": "consulting_focus_beratung",
+        "title": "Fokus‑Thema: Beratung & Unterstützung",
+        "subtitle": "Anteil in Halbjahr 1 2025",
+        "value": 0.696,
+        "delta": 0.116,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "Leistung per LLM aus Ausschreibungstexten klassifiziert (Mehrfachnennungen möglich). YTD vergleicht H1 2025 mit H1 2024.",
+        "interpretation": [
+          "**Beratung & Unterstützung** gewinnt im **Jahresvergleich** an **Bedeutung**.",
+          "Das Muster passt zu einer Phase, in der **Planung**, **Enablement** und **Begleitung** breit nachgefragt werden."
+        ],
+        "detailData": {
+          "mini_bars": [
+            { "label": "Halbjahr 1 2024", "median_pct": 58.0, "n": 81 },
+            { "label": "Halbjahr 1 2025", "median_pct": 69.6, "n": 115 }
+          ]
+        }
+      },
+      {
+        "id": "bd_award_consulting",
+        "title": "Zuschlagskriterien – Preisanteil",
+        "subtitle": "Median Preisanteil (H1 2025)",
+        "value": 0.50,
+        "delta": 0.10,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "method": "Faktisch geparst aus Vergabeunterlagen. Mediane je Periode. Dumbbell zeigt H1 2024 vs. H1 2025.",
+          "dumbbell": [
+            { "label": "Gesamt", "value_ref": 40.0, "n_ref": 57, "value_current": 50.0, "n_current": 84 },
+            { "label": "UVgO", "value_ref": 32.5, "n_ref": 24, "value_current": 50.0, "n_current": 37 },
+            { "label": "VgV", "value_ref": 40.0, "n_ref": 32, "value_current": 45.0, "n_current": 46 }
+          ],
+          "interpretation": [
+            "Der **Preis** gewinnt insgesamt an **Gewicht**; die Bewertung wirkt **wettbewerbsintensiver**.",
+            "Unter **UVgO** ist der Anstieg **klarer ausgeprägt**; VgV erhöht sich moderat."
+          ]
+        }
+      },
+      {
+        "id": "consulting_branches",
+        "title": "Fokus‑Thema: Beratung – Branchen‑Spotlights (vs. Markt)",
+        "subtitle": "Abweichung zur Marktveränderung (H1 2025 vs. H1 2024)",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Vergleich der prozentualen Veränderung (pp) einer Branchen-Beratungs-Kombination mit der Veränderung des Beratungs-Anteils im Gesamtmarkt.",
+          "items": [
+            {
+              "title": "Öffentliche Verwaltung – Beratung/Unterstützung",
+              "delta_vs_benchmark_pp": 12.0,
+              "focus_delta_pp": 23.6,
+              "benchmark_delta_pp": 11.5,
+              "confidence": "hoch"
+            }
+          ],
+          "interpretation": [
+            "Die **Nachfrage nach Beratung** in der **Öffentlichen Verwaltung** wächst **deutlich über dem Markttrend**."
+          ]
+        }
+      },
+      {
+        "id": "consulting_profiles",
+        "title": "Gefragte Consulting‑Profile",
+        "subtitle": "Top: KI-Projektmanager",
+        "value": 0.557,
+        "delta": 0.10,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "Anteil je Profil bezogen auf alle Ausschreibungen der Periode (Mehrfachnennung möglich). YTD = Q1+Q2 je Jahr.",
+        "interpretation": [
+          "**Projektmanagement** dominiert das Anforderungsbild; **Business-Analyse** legt **spürbar zu**.",
+          "**Compliance** gewinnt an Sichtbarkeit, bleibt aber klar **nachgeordnet**."
+        ],
+        "detailData": {
+          "bars": [
+            { "label": "KI-Projektmanager", "value_pct": 55.7, "delta_pp": 10.0, "detail_current": "64/115 in Halbjahr 1 2025", "detail_ref": "37/81 in Halbjahr 1 2024" },
+            { "label": "AI-Consultant", "value_pct": 41.7, "delta_pp": 2.3, "detail_current": "48/115 in Halbjahr 1 2025", "detail_ref": "32/81 in Halbjahr 1 2024" },
+            { "label": "Business Analyst", "value_pct": 35.7, "delta_pp": 6.0, "detail_current": "41/115 in Halbjahr 1 2025", "detail_ref": "24/81 in Halbjahr 1 2024" },
+            { "label": "Data Scientist", "value_pct": 25.2, "delta_pp": -3.2, "detail_current": "29/115 in Halbjahr 1 2025", "detail_ref": "23/81 in Halbjahr 1 2024" },
+            { "label": "Compliance‑Experte", "value_pct": 14.8, "delta_pp": 8.6, "detail_current": "17/115 in Halbjahr 1 2025", "detail_ref": "5/81 in Halbjahr 1 2024" }
+          ]
+        }
+      }
+    ]
+  },
+  "QoQ": {
+    "view": "QoQ",
+    "executiveSummaryPoints": [
+      {
+        "title": "Nachfrage Beratung",
+        "icon": "users",
+        "description": "Die Nachfrage nach Beratung & Unterstützung bleibt kurzfristig weitgehend stabil."
+      },
+      {
+        "title": "Wettbewerbsintensität",
+        "icon": "trending-down",
+        "description": "Der Median des Preisanteils bleibt im Quartalsvergleich stabil, was kurzfristig auf keine wesentliche Änderung der Vergabepraxis schließen lässt."
+      },
+      {
+        "title": "Branchen-Dynamik",
+        "icon": "building",
+        "description": "Im Gesundheitswesen nimmt die Nachfrage nach Beratungsleistungen im Quartalsvergleich ab, während Bildung & Forschung schneller wachsen als der Markt (kleine Datenbasis)."
+      },
+      {
+        "title": "Gefragte Profile",
+        "icon": "user-circle",
+        "description": "Kurzfristig zieht die Nachfrage nach Business-Analyse und Compliance an; Projektmanagement bleibt vorne."
+      }
+    ],
+    "cards": [
+      {
+        "id": "consulting_focus_beratung",
+        "title": "Fokus‑Thema: Beratung & Unterstützung",
+        "subtitle": "Anteil in Quartal 2 2025",
+        "value": 0.691,
+        "delta": -0.011,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "QoQ vergleicht Quartal 2 2025 mit Quartal 1 2025.",
+        "interpretation": [
+          "Kurzfristig weitgehend **stabil**; nach starkem Q1 zeigt sich ein **leichter Rückgang**.",
+          "Die **Nachfrage bleibt hoch**, ohne Richtungswechsel."
+        ],
+        "detailData": {
+          "mini_bars": [
+            { "label": "Quartal 1 2025", "median_pct": 70.2, "n": 47 },
+            { "label": "Quartal 2 2025", "median_pct": 69.1, "n": 68 }
+          ]
+        }
+      },
+      {
+        "id": "bd_award_consulting",
+        "title": "Zuschlagskriterien – Preisanteil",
+        "subtitle": "Median Preisanteil (Q2 2025)",
+        "value": 0.50,
+        "delta": 0.0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "faktisch",
+        "detailData": {
+          "method": "Faktisch geparst; Quartalsvergleich der Mediane.",
+          "mini_bars": [
+            { "label": "Quartal 1 2025", "median_pct": 50.0, "n": 34 },
+            { "label": "Quartal 2 2025", "median_pct": 50.0, "n": 50 }
+          ],
+          "interpretation": [
+            "Gesamtbild **stabil**.",
+            "Die **YoY-Aussage** ist derzeit **aussagekräftiger** als QoQ."
+          ]
+        }
+      },
+      {
+        "id": "consulting_branches",
+        "title": "Fokus‑Thema: Beratung – Branchen‑Spotlights (vs. Markt)",
+        "subtitle": "Abweichung zur Marktveränderung (Q2 2025 vs. Q1 2025)",
+        "value": 0,
+        "delta": 0,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "detailData": {
+          "method": "Vergleich der prozentualen Veränderung (pp) einer Branchen-Beratungs-Kombination mit der Veränderung des Beratungs-Anteils im Gesamtmarkt.",
+          "items": [
+            {
+              "title": "Gesundheitswesen – Beratung/Unterstützung",
+              "delta_vs_benchmark_pp": -32.7,
+              "focus_delta_pp": -33.8,
+              "benchmark_delta_pp": -1.1,
+              "confidence": "niedrig"
+            },
+            {
+              "title": "Bildung und Forschung – Beratung/Unterstützung",
+              "delta_vs_benchmark_pp": 14.9,
+              "focus_delta_pp": 13.8,
+              "benchmark_delta_pp": -1.1,
+              "confidence": "niedrig"
+            },
+            {
+              "title": "Öffentliche Verwaltung – Beratung/Unterstützung",
+              "delta_vs_benchmark_pp": -1.5,
+              "focus_delta_pp": -2.6,
+              "benchmark_delta_pp": -1.1,
+              "confidence": "mittel"
+            }
+          ],
+          "interpretation": [
+            "Im **Gesundheitswesen** kühlt die Nachfrage **stark ab**, während **Bildung & Forschung** **deutlich dynamischer** wächst als der Markt.",
+            "Die **Datenbasis** ist teils **gering**, daher ist eine **vorsichtige Interpretation** geboten (siehe 'Confidence')."
+          ]
+        }
+      },
+      {
+        "id": "consulting_profiles",
+        "title": "Gefragte Consulting‑Profile",
+        "subtitle": "Top: KI-Projektmanager",
+        "value": 0.574,
+        "delta": 0.042,
+        "valueType": "share",
+        "deltaType": "pp",
+        "provenance": "klassifiziert",
+        "calculationNote": "Anteil je Profil bezogen auf alle Ausschreibungen der Periode.",
+        "interpretation": [
+          "**Kurzfristig** zieht die Nachfrage nach **Business-Analyse** und **Compliance an**; **Projektmanagement** bleibt **vorne**."
+        ],
+        "detailData": {
+          "bars": [
+            { "label": "KI-Projektmanager", "value_pct": 57.4, "delta_pp": 4.2, "detail_current": "39/68 in Quartal 2 2025", "detail_ref": "25/47 in Quartal 1 2025" },
+            { "label": "Business Analyst", "value_pct": 39.7, "delta_pp": 9.9, "detail_current": "27/68 in Quartal 2 2025", "detail_ref": "14/47 in Quartal 1 2025" },
+            { "label": "AI Consultant", "value_pct": 38.2, "delta_pp": -8.6, "detail_current": "26/68 in Quartal 2 2025", "detail_ref": "22/47 in Quartal 1 2025" },
+            { "label": "Compliance‑Experte", "value_pct": 20.6, "delta_pp": 14.2, "detail_current": "14/68 in Quartal 2 2025", "detail_ref": "3/47 in Quartal 1 2025" },
+            { "label": "Data Scientist", "value_pct": 19.1, "delta_pp": -14.9, "detail_current": "13/68 in Quartal 2 2025", "detail_ref": "16/47 in Quartal 1 2025" }
+          ]
+        }
+      }
+    ]
+  }
+}
